@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal Tracking .NET", "Personal Tracking .NET\Personal Tracking .NET.csproj", "{6FDAE8B9-1F1A-464F-8C3A-74A270EB23C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{366DF037-2933-4EDD-B923-5EB1F5D325C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{AD38DE0C-7CEC-465F-BAC1-E1F281A4CB4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FDAE8B9-1F1A-464F-8C3A-74A270EB23C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDAE8B9-1F1A-464F-8C3A-74A270EB23C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDAE8B9-1F1A-464F-8C3A-74A270EB23C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDAE8B9-1F1A-464F-8C3A-74A270EB23C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366DF037-2933-4EDD-B923-5EB1F5D325C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366DF037-2933-4EDD-B923-5EB1F5D325C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366DF037-2933-4EDD-B923-5EB1F5D325C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366DF037-2933-4EDD-B923-5EB1F5D325C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD38DE0C-7CEC-465F-BAC1-E1F281A4CB4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD38DE0C-7CEC-465F-BAC1-E1F281A4CB4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD38DE0C-7CEC-465F-BAC1-E1F281A4CB4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD38DE0C-7CEC-465F-BAC1-E1F281A4CB4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C075A05C-110D-45EA-8E1D-32B36D4F1AD1}
+	EndGlobalSection
+EndGlobal
