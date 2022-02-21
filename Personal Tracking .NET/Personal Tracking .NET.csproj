@@ -64,6 +64,18 @@
     <Compile Include="FrmDepartmentList.Designer.cs">
       <DependentUpon>FrmDepartmentList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDepartmentList.resx">
       <DependentUpon>FrmDepartmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
