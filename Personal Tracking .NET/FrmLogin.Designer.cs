@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ckShowPassword = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ckShowPassword = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(545, 213);
             this.panel1.TabIndex = 0;
+            // 
+            // ckShowPassword
+            // 
+            this.ckShowPassword.AutoSize = true;
+            this.ckShowPassword.Location = new System.Drawing.Point(443, 87);
+            this.ckShowPassword.Name = "ckShowPassword";
+            this.ckShowPassword.Size = new System.Drawing.Size(62, 17);
+            this.ckShowPassword.TabIndex = 2;
+            this.ckShowPassword.Text = "Hiển thị";
+            this.ckShowPassword.UseVisualStyleBackColor = true;
+            this.ckShowPassword.CheckedChanged += new System.EventHandler(this.ckShowPassword_CheckedChanged);
             // 
             // btnExit
             // 
@@ -115,17 +126,6 @@
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã số nhân viên:";
-            // 
-            // ckShowPassword
-            // 
-            this.ckShowPassword.AutoSize = true;
-            this.ckShowPassword.Location = new System.Drawing.Point(443, 87);
-            this.ckShowPassword.Name = "ckShowPassword";
-            this.ckShowPassword.Size = new System.Drawing.Size(62, 17);
-            this.ckShowPassword.TabIndex = 2;
-            this.ckShowPassword.Text = "Hiển thị";
-            this.ckShowPassword.UseVisualStyleBackColor = true;
-            this.ckShowPassword.CheckedChanged += new System.EventHandler(this.ckShowPassword_CheckedChanged);
             // 
             // pictureBox1
             // 
