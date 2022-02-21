@@ -164,8 +164,11 @@
   <ItemGroup>
     <None Include="Resources\exit.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Content Include="Images\login_gov_icon_146024.ico" />
+    <Content Include="Images\user-manage_114453.ico" />
+    <Content Include="Resources\icons8-logout-58.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
