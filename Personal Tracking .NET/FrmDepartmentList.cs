@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +30,8 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            list = DepartmentBLL.GetDepartments();
+            dataGridView1.DataSource = list;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -36,6 +40,15 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+        }
+
+        List<DEPARTMENT> list = new List<DEPARTMENT>();
+        private void FrmDepartmentList_Load(object sender, EventArgs e)
+        {
+            list = DepartmentBLL.GetDepartments();
+            dataGridView1.DataSource = list;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Tên Phòng Ban";
         }
     }
 }

@@ -14,5 +14,10 @@ namespace BLL
         {
             DepartmentDAO.AddDepartment(department);
         }
+
+        public static List<DEPARTMENT> GetDepartments()
+        {
+            return DepartmentDAO.GetDepartments();
+        }
     }
 }
