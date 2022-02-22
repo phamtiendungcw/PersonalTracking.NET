@@ -21,5 +21,21 @@ namespace Personal_Tracking.NET
         {
             this.Close();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            FrmDepartment frm = new FrmDepartment();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FrmDepartment frm = new FrmDepartment();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
@@ -79,15 +79,16 @@
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnNew
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(297, 36);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(112, 37);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Thêm mới";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(297, 36);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(112, 37);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "Thêm mới";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // pnlForAdmin
             // 
@@ -239,6 +240,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel2
             // 
@@ -247,7 +249,7 @@
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnApprove);
-            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnNew);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 464);
             this.panel2.Name = "panel2";
@@ -439,7 +441,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbDeliveryDate;

@@ -175,6 +175,7 @@
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnPosition
             // 
@@ -188,6 +189,7 @@
             this.btnPosition.Text = "Chức vụ";
             this.btnPosition.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPosition.UseVisualStyleBackColor = true;
+            this.btnPosition.Click += new System.EventHandler(this.btnPosition_Click);
             // 
             // btnSalary
             // 
@@ -201,6 +203,7 @@
             this.btnSalary.Text = "Lương";
             this.btnSalary.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalary.UseVisualStyleBackColor = true;
+            this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
             // 
             // btnDepartment
             // 
@@ -214,6 +217,7 @@
             this.btnDepartment.Text = "Phòng ban";
             this.btnDepartment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDepartment.UseVisualStyleBackColor = true;
+            this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
             // 
             // btnTasks
             // 
@@ -227,6 +231,7 @@
             this.btnTasks.Text = "Nhiệm vụ";
             this.btnTasks.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTasks.UseVisualStyleBackColor = true;
+            this.btnTasks.Click += new System.EventHandler(this.btnTasks_Click);
             // 
             // btnPermission
             // 
@@ -240,6 +245,7 @@
             this.btnPermission.Text = "Quyền";
             this.btnPermission.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPermission.UseVisualStyleBackColor = true;
+            this.btnPermission.Click += new System.EventHandler(this.btnPermission_Click);
             // 
             // btnEmployee
             // 
@@ -253,6 +259,7 @@
             this.btnEmployee.Text = "Nhân Viên";
             this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEmployee.UseVisualStyleBackColor = true;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // FrmMain
             // 
