@@ -31,7 +31,7 @@ namespace Personal_Tracking.NET
             else
             {
                 DEPARTMENT department = new DEPARTMENT();
-                department.DepartmentName = txtDepartment.Text.ToString();
+                department.DepartmentName = txtDepartment.Text;
                 DepartmentBLL.AddDepartment(department);
             }
 
