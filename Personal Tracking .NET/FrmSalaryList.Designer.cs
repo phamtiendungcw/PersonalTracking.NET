@@ -32,12 +32,17 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbEqual = new System.Windows.Forms.RadioButton();
             this.rbLess = new System.Windows.Forms.RadioButton();
             this.rbMore = new System.Windows.Forms.RadioButton();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,11 +59,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rbEqual = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtYear = new System.Windows.Forms.TextBox();
-            this.txtSalary = new System.Windows.Forms.TextBox();
             this.pnlForAdmin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,6 +115,18 @@
             this.groupBox1.Size = new System.Drawing.Size(281, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // rbEqual
+            // 
+            this.rbEqual.AutoSize = true;
+            this.rbEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEqual.Location = new System.Drawing.Point(205, 20);
+            this.rbEqual.Name = "rbEqual";
+            this.rbEqual.Size = new System.Drawing.Size(63, 21);
+            this.rbEqual.TabIndex = 2;
+            this.rbEqual.TabStop = true;
+            this.rbEqual.Text = "Bằng";
+            this.rbEqual.UseVisualStyleBackColor = true;
             // 
             // rbLess
             // 
@@ -181,6 +193,44 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Lương:";
             // 
+            // txtSalary
+            // 
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(82, 118);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(200, 26);
+            this.txtSalary.TabIndex = 3;
+            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
+            // 
+            // txtYear
+            // 
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear.Location = new System.Drawing.Point(82, 34);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(200, 26);
+            this.txtYear.TabIndex = 1;
+            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Năm:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 20);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Tháng:";
+            // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,6 +240,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Đóng";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnUpdate
             // 
@@ -342,56 +393,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(932, 567);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // rbEqual
-            // 
-            this.rbEqual.AutoSize = true;
-            this.rbEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbEqual.Location = new System.Drawing.Point(205, 20);
-            this.rbEqual.Name = "rbEqual";
-            this.rbEqual.Size = new System.Drawing.Size(63, 21);
-            this.rbEqual.TabIndex = 2;
-            this.rbEqual.TabStop = true;
-            this.rbEqual.Text = "Bằng";
-            this.rbEqual.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 37);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Năm:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Tháng:";
-            // 
-            // txtYear
-            // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(82, 34);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(200, 26);
-            this.txtYear.TabIndex = 1;
-            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
-            // 
-            // txtSalary
-            // 
-            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(82, 118);
-            this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(200, 26);
-            this.txtSalary.TabIndex = 3;
-            this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // FrmSalaryList
             // 
