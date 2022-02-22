@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +22,21 @@ namespace Personal_Tracking.NET
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtDepartment.Text.Trim() == "")
+                MessageBox.Show("Hãy nhập một tên phòng ban!");
+            else
+            {
+                DEPARTMENT department = new DEPARTMENT();
+                department.DepartmentName = txtDepartment.Text.ToString();
+                DepartmentBLL.AddDepartment(department);
+            }
+
+            MessageBox.Show("Phòng ban đã được thêm.");
+            txtDepartment.Clear();
         }
     }
 }
