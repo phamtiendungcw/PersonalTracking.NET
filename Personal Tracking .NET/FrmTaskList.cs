@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Personal_Tracking.NET
 {
-    public partial class FrmEmployeeList : Form
+    public partial class FrmTaskList : Form
     {
-        public FrmEmployeeList()
+        public FrmTaskList()
         {
             InitializeComponent();
+        }
+
+        private void FrmTaskList_Load(object sender, EventArgs e)
+        {
+            pnlForAdmin.Hide();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

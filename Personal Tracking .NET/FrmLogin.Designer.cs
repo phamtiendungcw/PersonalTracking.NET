@@ -37,6 +37,7 @@
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -44,6 +45,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.ckShowPassword);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnLogin);
@@ -127,12 +129,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã số nhân viên:";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(221, 189);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(101, 13);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Đăng Ký Nhân Viên";
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Personal_Tracking.NET.Properties.Resources.Danh_Thiếp;
-            this.pictureBox1.Location = new System.Drawing.Point(221, 12);
+            this.pictureBox1.Image = global::Personal_Tracking.NET.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(247, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -168,5 +180,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox ckShowPassword;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

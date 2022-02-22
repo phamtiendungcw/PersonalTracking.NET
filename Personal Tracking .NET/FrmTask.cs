@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Personal_Tracking.NET
 {
-    public partial class FrmEmployeeList : Form
+    public partial class FrmTask : Form
     {
-        public FrmEmployeeList()
+        public FrmTask()
         {
             InitializeComponent();
         }

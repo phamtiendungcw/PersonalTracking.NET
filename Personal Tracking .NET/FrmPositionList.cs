@@ -16,5 +16,10 @@ namespace Personal_Tracking.NET
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
