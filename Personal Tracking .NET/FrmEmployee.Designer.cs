@@ -37,7 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pbImage = new System.Windows.Forms.PictureBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtAdress = new System.Windows.Forms.TextBox();
             this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
@@ -56,6 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
@@ -154,7 +154,7 @@
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(320, 532);
+            this.btnClose.Location = new System.Drawing.Point(303, 530);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(102, 41);
             this.btnClose.TabIndex = 10;
@@ -172,14 +172,6 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // pbImage
-            // 
-            this.pbImage.Location = new System.Drawing.Point(553, 23);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(202, 252);
-            this.pbImage.TabIndex = 15;
-            this.pbImage.TabStop = false;
             // 
             // btnBrowse
             // 
@@ -341,6 +333,14 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pbImage
+            // 
+            this.pbImage.Location = new System.Drawing.Point(553, 23);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(202, 252);
+            this.pbImage.TabIndex = 15;
+            this.pbImage.TabStop = false;
             // 
             // FrmEmployee
             // 

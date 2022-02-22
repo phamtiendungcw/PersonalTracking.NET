@@ -88,6 +88,18 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermission.Designer.cs">
+      <DependentUpon>FrmPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermissionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermissionList.Designer.cs">
+      <DependentUpon>FrmPermissionList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPosition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermission.resx">
+      <DependentUpon>FrmPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermissionList.resx">
+      <DependentUpon>FrmPermissionList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPosition.resx">
       <DependentUpon>FrmPosition.cs</DependentUpon>

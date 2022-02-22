@@ -41,10 +41,10 @@
             // dgvPositionList
             // 
             this.dgvPositionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvPositionList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPositionList.Location = new System.Drawing.Point(0, 0);
             this.dgvPositionList.Name = "dgvPositionList";
-            this.dgvPositionList.Size = new System.Drawing.Size(575, 344);
+            this.dgvPositionList.Size = new System.Drawing.Size(575, 420);
             this.dgvPositionList.TabIndex = 0;
             // 
             // panel1
