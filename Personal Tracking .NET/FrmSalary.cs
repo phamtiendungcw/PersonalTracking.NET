@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Personal_Tracking.NET
 {
-    public partial class FrmEmployeeList : Form
+    public partial class FrmSalary : Form
     {
-        public FrmEmployeeList()
+        public FrmSalary()
         {
             InitializeComponent();
         }
@@ -22,7 +22,12 @@ namespace Personal_Tracking.NET
             this.Close();
         }
 
-        private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = General.isNumber(e);
+        }
+
+        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = General.isNumber(e);
         }

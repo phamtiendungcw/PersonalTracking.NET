@@ -112,6 +112,18 @@
     <Compile Include="FrmPositionList.Designer.cs">
       <DependentUpon>FrmPositionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalary.Designer.cs">
+      <DependentUpon>FrmSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalaryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalaryList.Designer.cs">
+      <DependentUpon>FrmSalaryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPositionList.resx">
       <DependentUpon>FrmPositionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalary.resx">
+      <DependentUpon>FrmSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalaryList.resx">
+      <DependentUpon>FrmSalaryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTask.resx">
       <DependentUpon>FrmTask.cs</DependentUpon>

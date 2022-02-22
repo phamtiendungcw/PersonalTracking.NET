@@ -177,6 +177,8 @@
             this.Controls.Add(this.txtDayAmount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUserNo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPermission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quyền Hạn";

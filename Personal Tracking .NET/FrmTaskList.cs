@@ -26,5 +26,10 @@ namespace Personal_Tracking.NET
         {
             this.Close();
         }
+
+        private void txtUserNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = General.isNumber(e);
+        }
     }
 }
