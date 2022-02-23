@@ -76,5 +76,10 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
         }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -46,5 +46,16 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
         }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmEmployee frm = new FrmEmployee();
+            frm.ShowDialog();
+        }
+
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

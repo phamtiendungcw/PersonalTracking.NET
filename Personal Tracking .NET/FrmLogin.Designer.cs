@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.ckShowPassword = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.linkSignUp);
             this.panel1.Controls.Add(this.ckShowPassword);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnLogin);
@@ -57,6 +57,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(545, 213);
             this.panel1.TabIndex = 0;
+            // 
+            // linkSignUp
+            // 
+            this.linkSignUp.AutoSize = true;
+            this.linkSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSignUp.Location = new System.Drawing.Point(221, 189);
+            this.linkSignUp.Name = "linkSignUp";
+            this.linkSignUp.Size = new System.Drawing.Size(101, 13);
+            this.linkSignUp.TabIndex = 5;
+            this.linkSignUp.TabStop = true;
+            this.linkSignUp.Text = "Đăng Ký Nhân Viên";
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // ckShowPassword
             // 
@@ -130,17 +142,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã số nhân viên:";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(221, 189);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(101, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Đăng Ký Nhân Viên";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Personal_Tracking.NET.Properties.Resources.Logo;
@@ -165,6 +166,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -182,6 +184,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox ckShowPassword;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkSignUp;
     }
 }
