@@ -35,7 +35,7 @@ namespace DAL.DAO
                                 positionName = p.PositionName,
                                 departmentName = d.DepartmentName,
                                 deparmentID = p.DepartmentID
-                            }).OrderBy(x => x.positionID).ToList();
+                            }).OrderBy(x => x.deparmentID).ToList();
                 List<PositionDTO> positionList = new List<PositionDTO>();
                 foreach (var item in list)
                 {
