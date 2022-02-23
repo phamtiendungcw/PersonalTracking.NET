@@ -85,7 +85,7 @@
             this.cmbPosition.Location = new System.Drawing.Point(22, 120);
             this.cmbPosition.Name = "cmbPosition";
             this.cmbPosition.Size = new System.Drawing.Size(203, 28);
-            this.cmbPosition.TabIndex = 13;
+            this.cmbPosition.TabIndex = 1;
             // 
             // label8
             // 
@@ -104,7 +104,7 @@
             this.cmbDepartment.Location = new System.Drawing.Point(22, 51);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(203, 28);
-            this.cmbDepartment.TabIndex = 12;
+            this.cmbDepartment.TabIndex = 0;
             // 
             // label7
             // 
@@ -154,7 +154,7 @@
             this.btnClose.Location = new System.Drawing.Point(301, 428);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(102, 41);
-            this.btnClose.TabIndex = 23;
+            this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Đóng";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -166,7 +166,7 @@
             this.btnSave.Location = new System.Drawing.Point(193, 428);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(102, 41);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
@@ -176,7 +176,7 @@
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(323, 134);
-            this.txtContent.TabIndex = 17;
+            this.txtContent.TabIndex = 5;
             // 
             // label10
             // 
@@ -195,7 +195,7 @@
             this.cmbTaskState.Location = new System.Drawing.Point(193, 183);
             this.cmbTaskState.Name = "cmbTaskState";
             this.cmbTaskState.Size = new System.Drawing.Size(203, 28);
-            this.cmbTaskState.TabIndex = 16;
+            this.cmbTaskState.TabIndex = 3;
             // 
             // label1
             // 
@@ -233,7 +233,7 @@
             this.txtTitile.Location = new System.Drawing.Point(193, 236);
             this.txtTitile.Name = "txtTitile";
             this.txtTitile.Size = new System.Drawing.Size(203, 26);
-            this.txtTitile.TabIndex = 15;
+            this.txtTitile.TabIndex = 4;
             // 
             // txtSurname
             // 
@@ -242,7 +242,7 @@
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(203, 26);
-            this.txtSurname.TabIndex = 13;
+            this.txtSurname.TabIndex = 1;
             // 
             // label5
             // 
@@ -261,7 +261,7 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(203, 26);
-            this.txtName.TabIndex = 14;
+            this.txtName.TabIndex = 2;
             // 
             // label2
             // 
@@ -280,7 +280,7 @@
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.ReadOnly = true;
             this.txtUserNo.Size = new System.Drawing.Size(203, 26);
-            this.txtUserNo.TabIndex = 12;
+            this.txtUserNo.TabIndex = 0;
             // 
             // FrmTask
             // 

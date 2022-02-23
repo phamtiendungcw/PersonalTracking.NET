@@ -31,6 +31,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbEqual = new System.Windows.Forms.RadioButton();
             this.rbLess = new System.Windows.Forms.RadioButton();
@@ -57,8 +59,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.pnlForAdmin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -104,6 +104,26 @@
             this.pnlForAdmin.Name = "pnlForAdmin";
             this.pnlForAdmin.Size = new System.Drawing.Size(581, 237);
             this.pnlForAdmin.TabIndex = 1;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(435, 166);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(134, 41);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Xóa lựa chọn";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(295, 166);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(134, 41);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -159,7 +179,7 @@
             this.cmbMonth.Location = new System.Drawing.Point(82, 70);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(200, 28);
-            this.cmbMonth.TabIndex = 2;
+            this.cmbMonth.TabIndex = 1;
             // 
             // label8
             // 
@@ -177,7 +197,7 @@
             this.txtSalary.Location = new System.Drawing.Point(82, 113);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(200, 26);
-            this.txtSalary.TabIndex = 3;
+            this.txtSalary.TabIndex = 2;
             this.txtSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalary_KeyPress);
             // 
             // txtYear
@@ -186,7 +206,7 @@
             this.txtYear.Location = new System.Drawing.Point(82, 29);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(200, 26);
-            this.txtYear.TabIndex = 1;
+            this.txtYear.TabIndex = 0;
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // label6
@@ -371,26 +391,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(932, 250);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(295, 166);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(134, 41);
-            this.btnSearch.TabIndex = 13;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(435, 166);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(134, 41);
-            this.btnClear.TabIndex = 13;
-            this.btnClear.Text = "Xóa lựa chọn";
-            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // FrmSalaryList
             // 
