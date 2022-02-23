@@ -37,6 +37,7 @@ namespace Personal_Tracking.NET
         }
 
         EmployeeDTO dto = new EmployeeDTO();
+
         private void FrmEmployee_Load(object sender, EventArgs e)
         {
             dto = EmployeeBLL.GetAll();
@@ -52,6 +53,7 @@ namespace Personal_Tracking.NET
         }
 
         bool combofull = false;
+
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combofull)
@@ -62,6 +64,7 @@ namespace Personal_Tracking.NET
         }
 
         string fileName = "";
+
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -70,6 +73,21 @@ namespace Personal_Tracking.NET
                 txtImagePath.Text = openFileDialog1.FileName;
                 string Unique = Guid.NewGuid().ToString();
                 fileName += Unique + openFileDialog1.SafeFileName;
+            }
+        }
+
+        bool isUnique = false;
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            if (txtUserNo.Text.Trim() == "")
+                MessageBox.Show("Mã số nhân viên không được để trống!");
+            else
+            {
+                isUnique = EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text));
+                if (!isUnique)
+                    MessageBox.Show("Mã số nhân viên đã được sử dụng. Hãy thay đổi mã số khác!");
+                else
+                    MessageBox.Show("Mã số nhân viên có thể sử dụng!");
             }
         }
 
@@ -102,7 +120,7 @@ namespace Personal_Tracking.NET
                 employee.Salary = Convert.ToInt32(txtSalary.Text);
                 employee.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
                 employee.PositionID = Convert.ToInt32(cmbPosition.SelectedValue);
-                employee.Address = txtAdress.Text;
+                employee.Address = txtAddress.Text;
                 employee.BirthDay = dtpBirthday.Value;
                 employee.ImagePath = fileName;
                 EmployeeBLL.AddEmployee(employee);
@@ -114,7 +132,7 @@ namespace Personal_Tracking.NET
                 txtSurname.Clear();
                 txtName.Clear();
                 txtSalary.Clear();
-                txtAdress.Clear();
+                txtAddress.Clear();
                 txtImagePath.Clear();
                 pbImage.Image = null;
                 combofull = false;
@@ -123,21 +141,6 @@ namespace Personal_Tracking.NET
                 cmbPosition.SelectedIndex = -1;
                 combofull = true;
                 dtpBirthday.Value = DateTime.Today;
-            }
-        }
-
-        bool isUnique = false;
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            if (txtUserNo.Text.Trim() == "")
-                MessageBox.Show("Mã số nhân viên không được để trống!");
-            else
-            {
-                isUnique = EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text));
-                if (!isUnique)
-                    MessageBox.Show("Mã số nhân viên đã được sử dụng. Hãy thay đổi mã số khác!");
-                else
-                    MessageBox.Show("Mã số nhân viên có thể sử dụng!");
             }
         }
     }
