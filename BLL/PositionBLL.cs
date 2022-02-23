@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DAL.DAO;
+using DAL.DTO;
 
 namespace BLL
 {
@@ -13,6 +14,11 @@ namespace BLL
         public static void AddPosition(POSITION position)
         {
             PositionDAO.AddPosition(position);
+        }
+
+        public static List<PositionDTO> GetPositions()
+        {
+            return PositionDAO.GetPositions();
         }
     }
 }

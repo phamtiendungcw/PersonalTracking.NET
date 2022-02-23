@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +30,7 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            FillGrid();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -36,6 +39,22 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+        }
+
+        List<PositionDTO> positionList = new List<PositionDTO>();
+        void FillGrid()
+        {
+            positionList = PositionBLL.GetPositions();
+            dataGridView1.DataSource = positionList;
+        }
+
+        private void FrmPositionList_Load(object sender, EventArgs e)
+        {
+            FillGrid();
+            dataGridView1.Columns[0].HeaderText = "Tên phòng ban";
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "Tên chức vụ";
+            dataGridView1.Columns[3].Visible = false;
         }
     }
 }
