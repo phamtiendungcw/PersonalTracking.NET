@@ -46,9 +46,12 @@
     <Compile Include="DAO\EmployeeContext.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\PositionDAO.cs" />
+    <Compile Include="DAO\TaskDAO.cs" />
     <Compile Include="DTO\EmployeeDetailDTO.cs" />
     <Compile Include="DTO\EmployeeDTO.cs" />
     <Compile Include="DTO\PositionDTO.cs" />
+    <Compile Include="DTO\TaskDetailDTO.cs" />
+    <Compile Include="DTO\TaskDTO.cs" />
     <Compile Include="EmployeeDataClass.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
