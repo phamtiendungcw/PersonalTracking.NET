@@ -58,7 +58,7 @@ namespace Personal_Tracking.NET
             cmbDepartment.SelectedIndex = -1;
             cmbPosition.SelectedIndex = -1;
             combofull = true;
-            cmbTaskState.DataSource = dto.Taskstates;
+            cmbTaskState.DataSource = dto.TaskStates;
             cmbTaskState.DisplayMember = "StateName";
             cmbTaskState.ValueMember = "ID";
             cmbTaskState.SelectedIndex = -1;
