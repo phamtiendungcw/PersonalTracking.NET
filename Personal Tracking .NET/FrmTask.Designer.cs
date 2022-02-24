@@ -36,6 +36,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cmbTaskState = new System.Windows.Forms.ComboBox();
@@ -48,8 +50,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(533, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 501);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -76,7 +76,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(305, 143);
-            this.panel2.TabIndex = 2;
+            this.panel2.TabIndex = 0;
             // 
             // cmbPosition
             // 
@@ -147,7 +147,30 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(533, 501);
-            this.panel3.TabIndex = 1;
+            this.panel3.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(193, 429);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(102, 41);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(301, 429);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(102, 41);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtContent
             // 
@@ -261,29 +284,6 @@
             this.txtUserNo.ReadOnly = true;
             this.txtUserNo.Size = new System.Drawing.Size(203, 26);
             this.txtUserNo.TabIndex = 0;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(193, 429);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(102, 41);
-            this.btnSave.TabIndex = 26;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(301, 429);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(102, 41);
-            this.btnClose.TabIndex = 27;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmTask
             // 

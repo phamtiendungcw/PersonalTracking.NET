@@ -16,6 +16,9 @@ namespace Personal_Tracking.NET
 {
     public partial class FrmEmployee : Form
     {
+        EmployeeDTO dto = new EmployeeDTO();
+        bool combofull = false;
+
         public FrmEmployee()
         {
             InitializeComponent();
@@ -36,7 +39,6 @@ namespace Personal_Tracking.NET
             e.Handled = General.isNumber(e);
         }
 
-        EmployeeDTO dto = new EmployeeDTO();
 
         private void FrmEmployee_Load(object sender, EventArgs e)
         {
@@ -52,7 +54,6 @@ namespace Personal_Tracking.NET
             combofull = true;
         }
 
-        bool combofull = false;
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {

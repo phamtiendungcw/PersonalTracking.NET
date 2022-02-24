@@ -14,6 +14,8 @@ namespace Personal_Tracking.NET
 {
     public partial class FrmDepartmentList : Form
     {
+        List<DEPARTMENT> list = new List<DEPARTMENT>();
+
         public FrmDepartmentList()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace Personal_Tracking.NET
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -42,7 +44,6 @@ namespace Personal_Tracking.NET
             this.Visible = true;
         }
 
-        List<DEPARTMENT> list = new List<DEPARTMENT>();
         private void FrmDepartmentList_Load(object sender, EventArgs e)
         {
             list = DepartmentBLL.GetDepartments();

@@ -33,10 +33,9 @@ namespace Personal_Tracking.NET
                 DEPARTMENT department = new DEPARTMENT();
                 department.DepartmentName = txtDepartment.Text;
                 DepartmentBLL.AddDepartment(department);
+                MessageBox.Show("Phòng ban đã được thêm.");
+                txtDepartment.Clear();
             }
-
-            MessageBox.Show("Phòng ban đã được thêm.");
-            txtDepartment.Clear();
         }
     }
 }
