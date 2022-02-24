@@ -401,6 +401,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmSalaryList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Lương";
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
