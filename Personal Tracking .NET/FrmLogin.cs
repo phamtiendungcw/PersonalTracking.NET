@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace Personal_Tracking.NET
 {
@@ -42,9 +44,26 @@ namespace Personal_Tracking.NET
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmMain frm = new FrmMain();
-            this.Hide();
-            frm.ShowDialog();
+            if (txtUserNo.Text.Trim() == "" || txtPassword.Text.Trim() == "")
+                MessageBox.Show("Hãy nhập mã số nhân viên và mật khẩu!");
+            else
+            {
+                List<EMPLOYEE> employeelist =
+                    EmployeeBLL.GetEmployees(Convert.ToInt32(txtUserNo.Text), txtPassword.Text);
+                if (employeelist.Count == 0)
+                    MessageBox.Show("Hãy kiểm tra lại thông tin của bạn!");
+                else
+                {
+                    EMPLOYEE employee = new EMPLOYEE();
+                    employee = employeelist.First();
+                    UserStatic.EmployeeID = employee.ID;
+                    UserStatic.UserNo = employee.UserNo;
+                    UserStatic.isAdmin = employee.isAdmin;
+                    FrmMain frm = new FrmMain();
+                    this.Hide();
+                    frm.ShowDialog();
+                }
+            }
         }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -62,6 +62,14 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].Visible = false;
+            if (UserStatic.isAdmin == false)
+            {
+                MessageBox.Show("Checking... " + UserStatic.EmployeeID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString() + "\nBạn không phải quản trị viên!");
+            }
+            else
+            {
+                MessageBox.Show("Checking... " + UserStatic.EmployeeID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString() + "\nBạn là quản trị viên!");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
