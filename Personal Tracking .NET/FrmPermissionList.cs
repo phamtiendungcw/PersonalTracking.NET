@@ -47,10 +47,19 @@ namespace Personal_Tracking.NET
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            FrmPermission frm = new FrmPermission();
-            this.Hide();
-            frm.ShowDialog();
-            this.Visible = true;
+            if (detail.PermissionID == 0)
+                MessageBox.Show("Hãy lựa chọn một quyền từ bảng!");
+            else
+            {
+                FrmPermission frm = new FrmPermission();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                FillAllData();
+                CleanFilters();
+            }
         }
 
         PermissionDTO dto = new PermissionDTO();
@@ -93,6 +102,7 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[11].HeaderText = "Trạng thái";
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -109,11 +119,13 @@ namespace Personal_Tracking.NET
             if (cmbPosition.SelectedIndex != -1)
                 list = list.Where(x => x.PositionID == Convert.ToInt32(cmbPosition.SelectedValue)).ToList();
             if (rbStartDate.Checked)
-                list = list.Where(x => x.StartDate < Convert.ToDateTime(dtpEnd.Value) &&
-                                       x.StartDate > Convert.ToDateTime(dtpStart.Value)).ToList();
+                list = list.Where(x =>
+                    x.StartDate < Convert.ToDateTime(dtpEnd.Value) &&
+                    x.StartDate > Convert.ToDateTime(dtpStart.Value)).ToList();
             else if (rbEndDate.Checked)
-                list = list.Where(x => x.EndDate < Convert.ToDateTime(dtpEnd.Value) &&
-                                       x.EndDate > Convert.ToDateTime(dtpStart.Value)).ToList();
+                list = list.Where(x =>
+                    x.EndDate < Convert.ToDateTime(dtpEnd.Value) &&
+                    x.EndDate > Convert.ToDateTime(dtpStart.Value)).ToList();
             if (cmbState.SelectedIndex != -1)
                 list = list.Where(x => x.State == Convert.ToInt32(cmbState.SelectedValue)).ToList();
             if (txtDayAmount.Text.Trim() != "")
@@ -151,6 +163,34 @@ namespace Personal_Tracking.NET
             {
                 cmbPosition.DataSource = dto.Positions.Where(x => x.DepartmentID == Convert.ToInt32(cmbDepartment.SelectedValue)).ToList();
             }
+        }
+
+        PermissionDetailDTO detail = new PermissionDetailDTO();
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detail.StartDate = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detail.EndDate = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
+            detail.PermissionDayAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            detail.State = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            detail.Explanation = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+            detail.PermissionID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[14].Value);
+        }
+
+        private void btnApprove_Click(object sender, EventArgs e)
+        {
+            PermissionBLL.UpdatePermission(detail.PermissionID, PermissionStates.Approved);
+            MessageBox.Show("Cập nhật thành công!");
+            FillAllData();
+            CleanFilters();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PermissionBLL.UpdatePermission(detail.PermissionID, PermissionStates.Disapproved);
+            MessageBox.Show("Cập nhật thành công!");
+            FillAllData();
+            CleanFilters();
         }
     }
 }

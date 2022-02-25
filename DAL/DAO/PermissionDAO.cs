@@ -65,9 +65,43 @@ namespace DAL.DAO
                 dto.State = item.stateID;
                 dto.StateName = item.stateName;
                 dto.Explanation = item.explanation;
+                dto.PermissionID = item.permissionId;
                 permissions.Add(dto);
             }
             return permissions;
+        }
+
+        public static void UpdatePermission(PERMISSION permission)
+        {
+            try
+            {
+                PERMISSION pr = db.PERMISSIONs.First(x => x.ID == permission.ID);
+                pr.PermissionStartDate = permission.PermissionStartDate;
+                pr.PermissionEndDate = permission.PermissionEndDate;
+                pr.PermissionExplanation = permission.PermissionExplanation;
+                pr.PermissionDay = permission.PermissionDay;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public static void UpdatePermission(int permissionId, int approved)
+        {
+            try
+            {
+                PERMISSION pr = db.PERMISSIONs.First(x => x.ID == permissionId);
+                pr.PermissionState = approved;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }
