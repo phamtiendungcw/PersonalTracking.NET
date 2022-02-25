@@ -86,7 +86,7 @@ namespace Personal_Tracking.NET
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(salary.EmployeeID==0)
+            if (salary.EmployeeID == 0)
                 MessageBox.Show("Hãy lựa chọn một nhân viên từ bảng");
             else if (txtYear.Text.Trim() == "")
                 MessageBox.Show("Hãy nhập mục năm!");
