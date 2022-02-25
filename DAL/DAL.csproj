@@ -45,6 +45,7 @@
     <Compile Include="DAO\DepartmentDAO.cs" />
     <Compile Include="DAO\EmployeeContext.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\PermissionDAO.cs" />
     <Compile Include="DAO\PositionDAO.cs" />
     <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DAO\TaskDAO.cs" />

@@ -101,6 +101,7 @@ namespace Personal_Tracking.NET
                 salary.Amount = Convert.ToInt32(txtSalary.Text);
                 SalaryBLL.AddSalary(salary);
                 MessageBox.Show("Lương đã được thêm");
+                salary = new SALARY();
                 cmbMonth.SelectedIndex = -1;
             }
 
