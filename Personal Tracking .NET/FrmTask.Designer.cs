@@ -301,6 +301,7 @@
             this.lbSao.Size = new System.Drawing.Size(18, 22);
             this.lbSao.TabIndex = 17;
             this.lbSao.Text = "*";
+            this.lbSao.Visible = false;
             // 
             // label4
             // 
