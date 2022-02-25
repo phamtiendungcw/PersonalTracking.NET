@@ -59,7 +59,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 158);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(859, 341);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 1;
             // 
             // panel1
             // 
@@ -134,7 +134,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(859, 152);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 0;
             // 
             // txtName
             // 

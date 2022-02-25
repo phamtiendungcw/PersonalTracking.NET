@@ -146,9 +146,9 @@
             // 
             this.pnlButtonControl.Controls.Add(this.btnExit);
             this.pnlButtonControl.Controls.Add(this.btnLogOut);
-            this.pnlButtonControl.Location = new System.Drawing.Point(83, 311);
+            this.pnlButtonControl.Location = new System.Drawing.Point(93, 323);
             this.pnlButtonControl.Name = "pnlButtonControl";
-            this.pnlButtonControl.Size = new System.Drawing.Size(291, 126);
+            this.pnlButtonControl.Size = new System.Drawing.Size(270, 105);
             this.pnlButtonControl.TabIndex = 8;
             // 
             // btnExit
@@ -156,7 +156,7 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Image = global::Personal_Tracking.NET.Properties.Resources.exit;
-            this.btnExit.Location = new System.Drawing.Point(151, 14);
+            this.btnExit.Location = new System.Drawing.Point(141, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(114, 94);
             this.btnExit.TabIndex = 7;
@@ -168,7 +168,7 @@
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = global::Personal_Tracking.NET.Properties.Resources.icons8_exit_64;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogOut.Location = new System.Drawing.Point(26, 14);
+            this.btnLogOut.Location = new System.Drawing.Point(16, 5);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(114, 94);
             this.btnLogOut.TabIndex = 6;
@@ -182,7 +182,7 @@
             this.btnPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPosition.Image = global::Personal_Tracking.NET.Properties.Resources.position;
             this.btnPosition.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPosition.Location = new System.Drawing.Point(298, 180);
+            this.btnPosition.Location = new System.Drawing.Point(298, 171);
             this.btnPosition.Name = "btnPosition";
             this.btnPosition.Size = new System.Drawing.Size(114, 102);
             this.btnPosition.TabIndex = 5;
@@ -196,7 +196,7 @@
             this.btnSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalary.Image = global::Personal_Tracking.NET.Properties.Resources.icons8_salary_64;
             this.btnSalary.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalary.Location = new System.Drawing.Point(298, 35);
+            this.btnSalary.Location = new System.Drawing.Point(298, 26);
             this.btnSalary.Name = "btnSalary";
             this.btnSalary.Size = new System.Drawing.Size(114, 102);
             this.btnSalary.TabIndex = 2;
@@ -210,7 +210,7 @@
             this.btnDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepartment.Image = global::Personal_Tracking.NET.Properties.Resources.corporate;
             this.btnDepartment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDepartment.Location = new System.Drawing.Point(171, 180);
+            this.btnDepartment.Location = new System.Drawing.Point(171, 171);
             this.btnDepartment.Name = "btnDepartment";
             this.btnDepartment.Size = new System.Drawing.Size(114, 102);
             this.btnDepartment.TabIndex = 4;
@@ -224,7 +224,7 @@
             this.btnTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTasks.Image = global::Personal_Tracking.NET.Properties.Resources.icons8_task_64;
             this.btnTasks.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTasks.Location = new System.Drawing.Point(171, 35);
+            this.btnTasks.Location = new System.Drawing.Point(171, 26);
             this.btnTasks.Name = "btnTasks";
             this.btnTasks.Size = new System.Drawing.Size(114, 102);
             this.btnTasks.TabIndex = 1;
@@ -238,7 +238,7 @@
             this.btnPermission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPermission.Image = global::Personal_Tracking.NET.Properties.Resources.icons8_data_security_64;
             this.btnPermission.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPermission.Location = new System.Drawing.Point(44, 180);
+            this.btnPermission.Location = new System.Drawing.Point(44, 171);
             this.btnPermission.Name = "btnPermission";
             this.btnPermission.Size = new System.Drawing.Size(114, 102);
             this.btnPermission.TabIndex = 3;
@@ -252,7 +252,7 @@
             this.btnEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmployee.Image = global::Personal_Tracking.NET.Properties.Resources.icons8_employee_64;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEmployee.Location = new System.Drawing.Point(44, 35);
+            this.btnEmployee.Location = new System.Drawing.Point(44, 26);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(114, 102);
             this.btnEmployee.TabIndex = 0;

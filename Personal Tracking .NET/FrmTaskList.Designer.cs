@@ -336,7 +336,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 237);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(947, 261);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // panel2
@@ -350,7 +350,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 504);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(947, 68);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 2;
             // 
             // btnClose
             // 
