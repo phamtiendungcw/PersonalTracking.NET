@@ -36,6 +36,8 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            FillAllData();
+            CleanFilters();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -44,15 +46,33 @@ namespace Personal_Tracking.NET
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            FillAllData();
+            CleanFilters();
         }
 
         EmployeeDTO dto = new EmployeeDTO();
         private bool combofull = false;
 
-        private void FrmEmployeeList_Load(object sender, EventArgs e)
+        void FillAllData()
         {
             dto = EmployeeBLL.GetAll();
             dataGridView1.DataSource = dto.Employees;
+            combofull = false;
+            cmbDepartment.DataSource = dto.Departments;
+            cmbDepartment.DisplayMember = "DepartmentName";
+            cmbDepartment.ValueMember = "ID";
+            cmbPosition.DataSource = dto.Positions;
+            cmbPosition.DisplayMember = "PositionName";
+            cmbPosition.ValueMember = "ID";
+            cmbDepartment.SelectedIndex = -1;
+            cmbPosition.SelectedIndex = -1;
+            combofull = true;
+
+        }
+
+        private void FrmEmployeeList_Load(object sender, EventArgs e)
+        {
+            FillAllData();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Mã số nhân viên";
             dataGridView1.Columns[2].HeaderText = "Họ";
@@ -67,16 +87,6 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
-            combofull = false;
-            cmbDepartment.DataSource = dto.Departments;
-            cmbDepartment.DisplayMember = "DepartmentName";
-            cmbDepartment.ValueMember = "ID";
-            cmbPosition.DataSource = dto.Positions;
-            cmbPosition.DisplayMember = "PositionName";
-            cmbPosition.ValueMember = "ID";
-            cmbDepartment.SelectedIndex = -1;
-            cmbPosition.SelectedIndex = -1;
-            combofull = true;
         }
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,6 +114,11 @@ namespace Personal_Tracking.NET
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            CleanFilters();
+        }
+
+        private void CleanFilters()
         {
             txtUserNo.Clear();
             txtName.Clear();

@@ -85,5 +85,20 @@ namespace DAL.DAO
                 throw;
             }
         }
+
+        public static void UpdateEmployee(int employeeId, int amount)
+        {
+            try
+            {
+                EMPLOYEE employee = db.EMPLOYEEs.First(x => x.ID == employeeId);
+                employee.Salary = amount;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
