@@ -37,7 +37,7 @@ namespace Personal_Tracking.NET
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtPosition.Text.Trim() == "")
-                MessageBox.Show("Hãy nhập tên chức vụ!");
+                MessageBox.Show("Mục chức vụ không được để trống!");
             else if (cmbDepartment.SelectedIndex == -1)
                 MessageBox.Show("Hãy lựa chọn một phòng ban!");
             else
@@ -46,7 +46,7 @@ namespace Personal_Tracking.NET
                 position.PositionName = txtPosition.Text;
                 position.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
                 PositionBLL.AddPosition(position);
-                MessageBox.Show("Chức vụ đã được thêm.");
+                MessageBox.Show("Lưu thành công!");
                 txtPosition.Clear();
                 cmbDepartment.SelectedIndex = -1;
             }

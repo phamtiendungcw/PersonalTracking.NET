@@ -51,7 +51,7 @@ namespace Personal_Tracking.NET
                 List<EMPLOYEE> employeelist =
                     EmployeeBLL.GetEmployees(Convert.ToInt32(txtUserNo.Text), txtPassword.Text);
                 if (employeelist.Count == 0)
-                    MessageBox.Show("Hãy kiểm tra lại thông tin của bạn!");
+                    MessageBox.Show("Đăng nhập không thành công!\nHãy kiểm tra lại thông tin của bạn.");
                 else
                 {
                     EMPLOYEE employee = new EMPLOYEE();

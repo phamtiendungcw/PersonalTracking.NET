@@ -50,6 +50,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.lbSao = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,7 +64,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(533, 0);
+            this.panel1.Location = new System.Drawing.Point(543, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(305, 501);
             this.panel1.TabIndex = 1;
@@ -129,6 +132,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.lbSao);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.txtContent);
@@ -146,7 +152,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(533, 501);
+            this.panel3.Size = new System.Drawing.Size(543, 501);
             this.panel3.TabIndex = 0;
             // 
             // btnSave
@@ -285,11 +291,44 @@
             this.txtUserNo.Size = new System.Drawing.Size(203, 26);
             this.txtUserNo.TabIndex = 0;
             // 
+            // lbSao
+            // 
+            this.lbSao.AutoSize = true;
+            this.lbSao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSao.ForeColor = System.Drawing.Color.Red;
+            this.lbSao.Location = new System.Drawing.Point(402, 187);
+            this.lbSao.Name = "lbSao";
+            this.lbSao.Size = new System.Drawing.Size(18, 22);
+            this.lbSao.TabIndex = 17;
+            this.lbSao.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(402, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(18, 22);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(522, 345);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 22);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "*";
+            // 
             // FrmTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 501);
+            this.ClientSize = new System.Drawing.Size(848, 501);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -332,5 +371,8 @@
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbSao;
     }
 }

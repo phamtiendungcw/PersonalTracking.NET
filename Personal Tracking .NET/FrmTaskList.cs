@@ -88,7 +88,7 @@ namespace Personal_Tracking.NET
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (detail.TaskID == 0)
-                MessageBox.Show("Hãy lựa chọn một nhiệm vụ trong bảng");
+                MessageBox.Show("Hãy lựa chọn một nhiệm vụ từ bảng!");
             else
             {
                 FrmTask frm = new FrmTask();

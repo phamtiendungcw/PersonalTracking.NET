@@ -39,12 +39,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbSao = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbSao);
             this.panel1.Controls.Add(this.linkSignUp);
             this.panel1.Controls.Add(this.ckShowPassword);
             this.panel1.Controls.Add(this.btnExit);
@@ -152,6 +156,28 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // lbSao
+            // 
+            this.lbSao.AutoSize = true;
+            this.lbSao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSao.ForeColor = System.Drawing.Color.Red;
+            this.lbSao.Location = new System.Drawing.Point(436, 39);
+            this.lbSao.Name = "lbSao";
+            this.lbSao.Size = new System.Drawing.Size(18, 22);
+            this.lbSao.TabIndex = 17;
+            this.lbSao.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(504, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 22);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "*";
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnLogin;
@@ -185,5 +211,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox ckShowPassword;
         private System.Windows.Forms.LinkLabel linkSignUp;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbSao;
     }
 }

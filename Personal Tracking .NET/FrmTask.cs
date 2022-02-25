@@ -123,7 +123,7 @@ namespace Personal_Tracking.NET
                     task.TaskStartDate = DateTime.Today;
                     task.TaskState = 1;
                     TaskBLL.AddTask(task);
-                    MessageBox.Show("Nhiệm vụ đã được thêm");
+                    MessageBox.Show("Lưu thành công!");
                     txtTitile.Clear();
                     txtContent.Clear();
                     task = new TASK();
@@ -143,7 +143,7 @@ namespace Personal_Tracking.NET
                         update.TaskContent = txtContent.Text;
                         update.TaskState = Convert.ToInt32(cmbTaskState.SelectedValue);
                         TaskBLL.UpdateTask(update);
-                        MessageBox.Show("Nhiệm vụ đã được cập nhật");
+                        MessageBox.Show("Cập nhật thành công!");
                         Close();
                     }
                 }

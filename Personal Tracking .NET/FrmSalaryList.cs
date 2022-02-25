@@ -43,7 +43,7 @@ namespace Personal_Tracking.NET
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (detail.SalaryID == 0)
-                MessageBox.Show("Hãy lựa chọn một lương từ bảng");
+                MessageBox.Show("Hãy lựa chọn một lương từ bảng!");
             else
             {
                 FrmSalary frm = new FrmSalary();

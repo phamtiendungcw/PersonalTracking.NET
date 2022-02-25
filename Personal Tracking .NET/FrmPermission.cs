@@ -60,7 +60,7 @@ namespace Personal_Tracking.NET
             else if (Convert.ToInt32(txtDayAmount.Text) <= 0)
                 MessageBox.Show("Tổng số ngày phải lớn hơn 0!");
             else if (txtExplanation.Text.Trim() == "")
-                MessageBox.Show("Chú giải không được để trống!");
+                MessageBox.Show("Mục chú giải không được để trống!");
             else
             {
                 PERMISSION permission = new PERMISSION();
@@ -73,12 +73,12 @@ namespace Personal_Tracking.NET
                     permission.PermissionDay = Convert.ToInt32(txtDayAmount.Text);
                     permission.PermissionExplanation = txtExplanation.Text;
                     PermissionBLL.AddPermission(permission);
-                    MessageBox.Show("Quyền đã được thêm");
-                    permission = new PERMISSION();
+                    MessageBox.Show("Lưu thành công!");
                     dtpStart.Value = DateTime.Today;
                     dtpEnd.Value = DateTime.Today;
                     txtDayAmount.Clear();
                     txtExplanation.Clear();
+                    permission = new PERMISSION();
                 }
                 else if (isUpdate)
                 {

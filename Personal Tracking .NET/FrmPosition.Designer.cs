@@ -34,6 +34,8 @@
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lbSao = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPosition
@@ -96,11 +98,35 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lbSao
+            // 
+            this.lbSao.AutoSize = true;
+            this.lbSao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSao.ForeColor = System.Drawing.Color.Red;
+            this.lbSao.Location = new System.Drawing.Point(347, 30);
+            this.lbSao.Name = "lbSao";
+            this.lbSao.Size = new System.Drawing.Size(18, 22);
+            this.lbSao.TabIndex = 17;
+            this.lbSao.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(347, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 22);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "*";
+            // 
             // FrmPosition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 185);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbSao);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cmbDepartment);
@@ -125,5 +151,7 @@
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lbSao;
+        private System.Windows.Forms.Label label3;
     }
 }

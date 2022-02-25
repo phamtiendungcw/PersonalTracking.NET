@@ -50,6 +50,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.lbSao = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -129,6 +132,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.lbSao);
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.cmbMonth);
@@ -286,6 +292,39 @@
             this.txtUserNo.Size = new System.Drawing.Size(203, 26);
             this.txtUserNo.TabIndex = 0;
             // 
+            // lbSao
+            // 
+            this.lbSao.AutoSize = true;
+            this.lbSao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSao.ForeColor = System.Drawing.Color.Red;
+            this.lbSao.Location = new System.Drawing.Point(438, 251);
+            this.lbSao.Name = "lbSao";
+            this.lbSao.Size = new System.Drawing.Size(18, 22);
+            this.lbSao.TabIndex = 26;
+            this.lbSao.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(438, 300);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 22);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "*";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(438, 349);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 22);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "*";
+            // 
             // FrmSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,5 +371,8 @@
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbSao;
     }
 }

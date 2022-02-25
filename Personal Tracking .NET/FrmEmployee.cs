@@ -99,17 +99,17 @@ namespace Personal_Tracking.NET
             else if (!EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text)))
                 MessageBox.Show("Mã số nhân viên đã được sử dụng. Hãy thay đổi mã số khác!");
             else if (txtPassword.Text.Trim() == "")
-                MessageBox.Show("Mật khẩu không được để trống!");
+                MessageBox.Show("Mục mật khẩu không được để trống!");
             else if (txtSurname.Text.Trim() == "")
-                MessageBox.Show("Họ không được để trống!");
+                MessageBox.Show("Mục họ không được để trống!");
             else if (txtName.Text.Trim() == "")
-                MessageBox.Show("Tên không được để trống!");
+                MessageBox.Show("Mục tên không được để trống!");
             else if (txtSalary.Text.Trim() == "")
-                MessageBox.Show("Lương không được để trống!");
+                MessageBox.Show("Mục lương không được để trống!");
             else if (cmbDepartment.SelectedIndex == -1)
-                MessageBox.Show("Hãy lựa chọn một phòng ban");
+                MessageBox.Show("Hãy lựa chọn một phòng ban!");
             else if (cmbPosition.SelectedIndex == -1)
-                MessageBox.Show("Hãy lựa chọn một chức vụ");
+                MessageBox.Show("Hãy lựa chọn một chức vụ!");
             else
             {
                 EMPLOYEE employee = new EMPLOYEE();
@@ -126,7 +126,7 @@ namespace Personal_Tracking.NET
                 employee.ImagePath = fileName;
                 EmployeeBLL.AddEmployee(employee);
                 File.Copy(txtImagePath.Text, @"images\\" + fileName);
-                MessageBox.Show("Nhân viên đã được thêm");
+                MessageBox.Show("Thông tin nhân viên đã được lưu!");
                 txtUserNo.Clear();
                 txtPassword.Clear();
                 chAdmin.Checked = false;

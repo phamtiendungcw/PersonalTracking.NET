@@ -114,7 +114,7 @@ namespace Personal_Tracking.NET
                 if (!isUpdate)
                 {
                     if (salary.EmployeeID == 0)
-                        MessageBox.Show("Hãy lựa chọn một nhân viên từ bảng");
+                        MessageBox.Show("Hãy lựa chọn một nhân viên từ bảng!");
                     else
                     {
                         salary.Year = Convert.ToInt32(txtYear.Text);
@@ -123,14 +123,14 @@ namespace Personal_Tracking.NET
                         if (salary.Amount > oldSalary)
                             control = true;
                         SalaryBLL.AddSalary(salary, control);
-                        MessageBox.Show("Lương đã được thêm");
+                        MessageBox.Show("Lưu thành công!");
                         cmbMonth.SelectedIndex = -1;
                         salary = new SALARY();
                     }
                 }
                 else
                 {
-                    DialogResult rs = MessageBox.Show("Bạn có muốn cập nhật?", "Cảnh báo!", MessageBoxButtons.YesNo);
+                    DialogResult rs = MessageBox.Show("Bạn có chắc muốn cập nhật?", "Cảnh báo!", MessageBoxButtons.YesNo);
                     if (DialogResult.Yes == rs)
                     {
                         SALARY salary = new SALARY();
