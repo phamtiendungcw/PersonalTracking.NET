@@ -118,7 +118,7 @@
             this.btnClear.Location = new System.Drawing.Point(363, 180);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(142, 41);
-            this.btnClear.TabIndex = 15;
+            this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Xóa lựa chọn";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -129,7 +129,7 @@
             this.btnSearch.Location = new System.Drawing.Point(363, 133);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(142, 41);
-            this.btnSearch.TabIndex = 14;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -141,7 +141,7 @@
             this.cmbState.Location = new System.Drawing.Point(156, 175);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(200, 28);
-            this.cmbState.TabIndex = 4;
+            this.cmbState.TabIndex = 3;
             // 
             // groupBox1
             // 
