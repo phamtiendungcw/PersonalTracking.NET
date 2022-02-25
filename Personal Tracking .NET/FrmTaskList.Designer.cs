@@ -30,9 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
             this.rbStartDate = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.cmbTaskState = new System.Windows.Forms.ComboBox();
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
@@ -58,8 +60,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlForAdmin.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -96,6 +96,17 @@
             this.pnlForAdmin.Size = new System.Drawing.Size(596, 237);
             this.pnlForAdmin.TabIndex = 1;
             // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(435, 180);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(142, 41);
+            this.btnClear.TabIndex = 8;
+            this.btnClear.Text = "Xóa lựa chọn";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.rbDeliveryDate);
@@ -129,6 +140,17 @@
             this.rbStartDate.TabStop = true;
             this.rbStartDate.Text = "Ngày bắt đầu";
             this.rbStartDate.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(435, 133);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(142, 41);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dtpEnd
             // 
@@ -311,10 +333,12 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 236);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 237);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(947, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(947, 335);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // panel2
             // 
@@ -381,28 +405,6 @@
             this.btnNew.Text = "Thêm mới";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(435, 180);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(142, 41);
-            this.btnClear.TabIndex = 8;
-            this.btnClear.Text = "Xóa lựa chọn";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(435, 133);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(142, 41);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // FrmTaskList
             // 

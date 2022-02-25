@@ -44,6 +44,7 @@ namespace Personal_Tracking.NET
 
         }
 
+        TaskDetailDTO detail = new TaskDetailDTO();
         private void FrmTaskList_Load(object sender, EventArgs e)
         {
             FillAllData();
@@ -62,14 +63,6 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].Visible = false;
-            if (UserStatic.isAdmin == false)
-            {
-                MessageBox.Show("Checking... " + UserStatic.EmployeeID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString() + "\nBạn không phải quản trị viên!");
-            }
-            else
-            {
-                MessageBox.Show("Checking... " + UserStatic.EmployeeID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString() + "\nBạn là quản trị viên!");
-            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -94,10 +87,19 @@ namespace Personal_Tracking.NET
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            FrmTask frm = new FrmTask();
-            this.Hide();
-            frm.ShowDialog();
-            this.Visible = true;
+            if (detail.TaskID == 0)
+                MessageBox.Show("Hãy lựa chọn một nhiệm vụ trong bảng");
+            else
+            {
+                FrmTask frm = new FrmTask();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                FillAllData();
+                CleanFilters();
+            }
         }
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,6 +158,20 @@ namespace Personal_Tracking.NET
             dtpStart.Value = DateTime.Today;
             dtpEnd.Value = DateTime.Today;
 
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail.Title = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            detail.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detail.Surname = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detail.Name = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detail.TaskStartDate = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+            detail.TaskDeliveryDate = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[5].Value);
+            detail.EmployeeID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            detail.TaskID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            detail.Content = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+            detail.TaskStateID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[14].Value);
         }
     }
 }

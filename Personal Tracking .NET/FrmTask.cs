@@ -27,6 +27,8 @@ namespace Personal_Tracking.NET
 
         TaskDTO dto = new TaskDTO();
         private bool combofull = false;
+        public bool isUpdate = false;
+        public TaskDetailDTO detail = new TaskDetailDTO();
 
         private void FrmTask_Load(object sender, EventArgs e)
         {
@@ -58,10 +60,20 @@ namespace Personal_Tracking.NET
             cmbDepartment.SelectedIndex = -1;
             cmbPosition.SelectedIndex = -1;
             combofull = true;
-            cmbTaskState.DataSource = dto.TaskStates;
-            cmbTaskState.DisplayMember = "StateName";
-            cmbTaskState.ValueMember = "ID";
-            cmbTaskState.SelectedIndex = -1;
+            if (isUpdate)
+            {
+                label1.Visible = true;
+                cmbTaskState.Visible = true;
+                txtName.Text = detail.Name;
+                txtUserNo.Text = detail.UserNo.ToString();
+                txtSurname.Text = detail.Surname;
+                txtTitile.Text = detail.Title;
+                txtContent.Text = detail.Content;
+                cmbTaskState.DataSource = dto.TaskStates;
+                cmbTaskState.DisplayMember = "StateName";
+                cmbTaskState.ValueMember = "ID";
+                cmbTaskState.SelectedValue = detail.TaskStateID;
+            }
         }
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,15 +116,37 @@ namespace Personal_Tracking.NET
                 MessageBox.Show("Nội dung không được để trống!");
             else
             {
-                task.TaskTitle = txtTitile.Text;
-                task.TaskContent = txtContent.Text;
-                task.TaskStartDate = DateTime.Today;
-                task.TaskState = 1;
-                TaskBLL.AddTask(task);
-                MessageBox.Show("Nhiệm vụ đã được thêm");
-                txtTitile.Clear();
-                txtContent.Clear();
-                task = new TASK();
+                if (!isUpdate)
+                {
+                    task.TaskTitle = txtTitile.Text;
+                    task.TaskContent = txtContent.Text;
+                    task.TaskStartDate = DateTime.Today;
+                    task.TaskState = 1;
+                    TaskBLL.AddTask(task);
+                    MessageBox.Show("Nhiệm vụ đã được thêm");
+                    txtTitile.Clear();
+                    txtContent.Clear();
+                    task = new TASK();
+                }
+                else if (isUpdate)
+                {
+                    DialogResult rs = MessageBox.Show("Bạn có chắc muốn cập nhật?", "Cảnh báo!", MessageBoxButtons.YesNo);
+                    if (rs == DialogResult.Yes)
+                    {
+                        TASK update = new TASK();
+                        update.ID = detail.TaskID;
+                        if (Convert.ToInt32(txtUserNo.Text) != detail.UserNo)
+                            update.EmployeeID = task.EmployeeID;
+                        else
+                            update.EmployeeID = detail.EmployeeID;
+                        update.TaskTitle = txtTitile.Text;
+                        update.TaskContent = txtContent.Text;
+                        update.TaskState = Convert.ToInt32(cmbTaskState.SelectedValue);
+                        TaskBLL.UpdateTask(update);
+                        MessageBox.Show("Nhiệm vụ đã được cập nhật");
+                        Close();
+                    }
+                }
             }
 
         }
