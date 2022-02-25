@@ -18,6 +18,7 @@ namespace BLL
             dto.Departments = DepartmentDAO.GetDepartments();
             dto.Positions = PositionDAO.GetPositions();
             dto.Months = SalaryDAO.GetMonths();
+            dto.Salaries = SalaryDAO.GetSalaries();
             return dto;
         }
 

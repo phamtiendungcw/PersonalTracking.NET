@@ -114,6 +114,7 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Xóa lựa chọn";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSearch
             // 
@@ -124,6 +125,7 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox1
             // 
@@ -280,6 +282,7 @@
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(183, 28);
             this.cmbDepartment.TabIndex = 3;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -403,6 +406,7 @@
             this.Name = "FrmSalaryList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Lương";
+            this.Load += new System.EventHandler(this.FrmSalaryList_Load);
             this.pnlForAdmin.ResumeLayout(false);
             this.pnlForAdmin.PerformLayout();
             this.groupBox1.ResumeLayout(false);
