@@ -39,16 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbSao = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbSao);
             this.panel1.Controls.Add(this.linkSignUp);
             this.panel1.Controls.Add(this.ckShowPassword);
             this.panel1.Controls.Add(this.btnExit);
@@ -66,7 +62,7 @@
             // 
             this.linkSignUp.AutoSize = true;
             this.linkSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkSignUp.Location = new System.Drawing.Point(221, 189);
+            this.linkSignUp.Location = new System.Drawing.Point(221, 176);
             this.linkSignUp.Name = "linkSignUp";
             this.linkSignUp.Size = new System.Drawing.Size(101, 13);
             this.linkSignUp.TabIndex = 5;
@@ -77,7 +73,7 @@
             // ckShowPassword
             // 
             this.ckShowPassword.AutoSize = true;
-            this.ckShowPassword.Location = new System.Drawing.Point(436, 87);
+            this.ckShowPassword.Location = new System.Drawing.Point(436, 74);
             this.ckShowPassword.Name = "ckShowPassword";
             this.ckShowPassword.Size = new System.Drawing.Size(62, 17);
             this.ckShowPassword.TabIndex = 2;
@@ -89,7 +85,7 @@
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(286, 141);
+            this.btnExit.Location = new System.Drawing.Point(286, 128);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(125, 36);
             this.btnExit.TabIndex = 4;
@@ -100,7 +96,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(133, 141);
+            this.btnLogin.Location = new System.Drawing.Point(133, 128);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(125, 36);
             this.btnLogin.TabIndex = 3;
@@ -111,7 +107,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(197, 82);
+            this.txtPassword.Location = new System.Drawing.Point(197, 69);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(233, 26);
             this.txtPassword.TabIndex = 1;
@@ -120,7 +116,7 @@
             // txtUserNo
             // 
             this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserNo.Location = new System.Drawing.Point(197, 36);
+            this.txtUserNo.Location = new System.Drawing.Point(197, 23);
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(233, 26);
             this.txtUserNo.TabIndex = 0;
@@ -130,7 +126,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(47, 85);
+            this.label3.Location = new System.Drawing.Point(47, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 1;
@@ -140,7 +136,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 39);
+            this.label1.Location = new System.Drawing.Point(47, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 0;
@@ -155,28 +151,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // lbSao
-            // 
-            this.lbSao.AutoSize = true;
-            this.lbSao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSao.ForeColor = System.Drawing.Color.Red;
-            this.lbSao.Location = new System.Drawing.Point(436, 39);
-            this.lbSao.Name = "lbSao";
-            this.lbSao.Size = new System.Drawing.Size(18, 22);
-            this.lbSao.TabIndex = 17;
-            this.lbSao.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(504, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 22);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "*";
             // 
             // FrmLogin
             // 
@@ -211,7 +185,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox ckShowPassword;
         private System.Windows.Forms.LinkLabel linkSignUp;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbSao;
     }
 }
