@@ -49,6 +49,8 @@ namespace Personal_Tracking.NET
         {
             if (detail.PermissionID == 0)
                 MessageBox.Show("Hãy lựa chọn một quyền từ bảng!");
+            else if (detail.State == PermissionStates.Approved || detail.State == PermissionStates.Disapproved)
+                MessageBox.Show("Bạn không thể cập nhật khi đã phê duyệt hoặc không chấp thuận quyền này!");
             else
             {
                 FrmPermission frm = new FrmPermission();
@@ -68,6 +70,8 @@ namespace Personal_Tracking.NET
         void FillAllData()
         {
             dto = PermissionBLL.GetAll();
+            if (!UserStatic.isAdmin)
+                dto.Permissions = dto.Permissions.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
             dataGridView1.DataSource = dto.Permissions;
             combofull = false;
             cmbDepartment.DataSource = dto.Departments;
@@ -103,6 +107,14 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].Visible = false;
+            if (!UserStatic.isAdmin)
+            {
+                pnlForAdmin.Visible = false;
+                btnApprove.Hide();
+                btnDisaprove.Hide();
+                btnDelete.Hide();
+                btnClose.Location = new Point(539, 36);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

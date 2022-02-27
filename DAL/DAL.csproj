@@ -59,6 +59,7 @@
     <Compile Include="DTO\SalaryDTO.cs" />
     <Compile Include="DTO\TaskDetailDTO.cs" />
     <Compile Include="DTO\TaskDTO.cs" />
+    <Compile Include="DTO\TaskState.cs" />
     <Compile Include="EmployeeDataClass.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -74,5 +74,16 @@ namespace Personal_Tracking.NET
             detail.DepartmentID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             detail.OldDepartmentID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa chức vụ này", "Cảnh báo!!!", MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                PositionBLL.DeletePosition(detail.ID);
+                MessageBox.Show("Chức vụ này đã được xóa");
+                FillGrid();
+            }
+        }
     }
 }

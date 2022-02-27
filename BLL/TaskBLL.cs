@@ -36,5 +36,11 @@ namespace BLL
         {
             TaskDAO.DeleteTask(detailTaskId);
         }
+
+        public static void ApproveTask(int detailTaskId, bool isAdmin)
+        {
+
+            TaskDAO.ApproveTask(detailTaskId, isAdmin);
+        }
     }
 }

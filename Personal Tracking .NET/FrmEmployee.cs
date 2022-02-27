@@ -69,6 +69,14 @@ namespace Personal_Tracking.NET
                 imagePath = Application.StartupPath + "\\images\\" + detail.ImagePath;
                 txtImagePath.Text = imagePath;
                 pbImage.ImageLocation = imagePath;
+                if (!UserStatic.isAdmin)
+                {
+                    chAdmin.Enabled = false;
+                    txtUserNo.Enabled = false;
+                    txtSalary.Enabled = false;
+                    cmbDepartment.Enabled = false;
+                    cmbPosition.Enabled = false;
+                }
             }
         }
 

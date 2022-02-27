@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.pnl4 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rbDeliveryDate = new System.Windows.Forms.RadioButton();
@@ -42,7 +42,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,40 +61,40 @@
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.pnlForAdmin.SuspendLayout();
+            this.pnl4.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlForAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnl4);
             this.panel1.Controls.Add(this.pnlForAdmin);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(947, 237);
             this.panel1.TabIndex = 0;
             // 
-            // pnlForAdmin
+            // pnl4
             // 
-            this.pnlForAdmin.Controls.Add(this.btnClear);
-            this.pnlForAdmin.Controls.Add(this.groupBox1);
-            this.pnlForAdmin.Controls.Add(this.btnSearch);
-            this.pnlForAdmin.Controls.Add(this.dtpEnd);
-            this.pnlForAdmin.Controls.Add(this.cmbTaskState);
-            this.pnlForAdmin.Controls.Add(this.dtpStart);
-            this.pnlForAdmin.Controls.Add(this.label7);
-            this.pnlForAdmin.Controls.Add(this.label8);
-            this.pnlForAdmin.Controls.Add(this.label9);
-            this.pnlForAdmin.Controls.Add(this.label6);
-            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForAdmin.Location = new System.Drawing.Point(351, 0);
-            this.pnlForAdmin.Name = "pnlForAdmin";
-            this.pnlForAdmin.Size = new System.Drawing.Size(596, 237);
-            this.pnlForAdmin.TabIndex = 1;
+            this.pnl4.Controls.Add(this.btnClear);
+            this.pnl4.Controls.Add(this.groupBox1);
+            this.pnl4.Controls.Add(this.btnSearch);
+            this.pnl4.Controls.Add(this.dtpEnd);
+            this.pnl4.Controls.Add(this.cmbTaskState);
+            this.pnl4.Controls.Add(this.dtpStart);
+            this.pnl4.Controls.Add(this.label7);
+            this.pnl4.Controls.Add(this.label8);
+            this.pnl4.Controls.Add(this.label9);
+            this.pnl4.Controls.Add(this.label6);
+            this.pnl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl4.Location = new System.Drawing.Point(351, 0);
+            this.pnl4.Name = "pnl4";
+            this.pnl4.Size = new System.Drawing.Size(596, 237);
+            this.pnl4.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -217,23 +217,23 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Task Date";
             // 
-            // panel3
+            // pnlForAdmin
             // 
-            this.panel3.Controls.Add(this.cmbPosition);
-            this.panel3.Controls.Add(this.cmbDepartment);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtName);
-            this.panel3.Controls.Add(this.txtSurname);
-            this.panel3.Controls.Add(this.txtUserNo);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(351, 237);
-            this.panel3.TabIndex = 0;
+            this.pnlForAdmin.Controls.Add(this.cmbPosition);
+            this.pnlForAdmin.Controls.Add(this.cmbDepartment);
+            this.pnlForAdmin.Controls.Add(this.label5);
+            this.pnlForAdmin.Controls.Add(this.label4);
+            this.pnlForAdmin.Controls.Add(this.txtName);
+            this.pnlForAdmin.Controls.Add(this.txtSurname);
+            this.pnlForAdmin.Controls.Add(this.txtUserNo);
+            this.pnlForAdmin.Controls.Add(this.label3);
+            this.pnlForAdmin.Controls.Add(this.label2);
+            this.pnlForAdmin.Controls.Add(this.label1);
+            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlForAdmin.Location = new System.Drawing.Point(0, 0);
+            this.pnlForAdmin.Name = "pnlForAdmin";
+            this.pnlForAdmin.Size = new System.Drawing.Size(351, 237);
+            this.pnlForAdmin.TabIndex = 0;
             // 
             // cmbPosition
             // 
@@ -392,8 +392,9 @@
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(112, 37);
             this.btnApprove.TabIndex = 0;
-            this.btnApprove.Text = "Chấp thuận";
+            this.btnApprove.Text = "Phê duyệt";
             this.btnApprove.UseVisualStyleBackColor = true;
+            this.btnApprove.Click += new System.EventHandler(this.btnApprove_Click);
             // 
             // btnNew
             // 
@@ -419,12 +420,12 @@
             this.Text = "Danh Sách Nhiệm Vụ";
             this.Load += new System.EventHandler(this.FrmTaskList_Load);
             this.panel1.ResumeLayout(false);
-            this.pnlForAdmin.ResumeLayout(false);
-            this.pnlForAdmin.PerformLayout();
+            this.pnl4.ResumeLayout(false);
+            this.pnl4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlForAdmin.ResumeLayout(false);
+            this.pnlForAdmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -441,8 +442,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnApprove;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlForAdmin;
+        private System.Windows.Forms.Panel pnl4;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtUserNo;

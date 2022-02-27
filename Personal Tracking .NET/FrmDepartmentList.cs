@@ -67,5 +67,19 @@ namespace Personal_Tracking.NET
             detail.ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             detail.DepartmentName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa phòng ban này?", "Cảnh báo!!!", MessageBoxButtons.YesNo);
+
+            if (rs == DialogResult.Yes)
+            {
+                DepartmentBLL.DeleteDepartment(detail.ID);
+                MessageBox.Show("Department đã được xóa");
+
+                list = DepartmentBLL.GetDepartments();
+                dataGridView1.DataSource = list;
+            }
+        }
     }
 }

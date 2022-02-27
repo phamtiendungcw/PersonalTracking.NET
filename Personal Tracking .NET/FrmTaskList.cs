@@ -26,6 +26,8 @@ namespace Personal_Tracking.NET
         void FillAllData()
         {
             dto = TaskBLL.GetAll();
+            if (!UserStatic.isAdmin)
+                dto.Tasks = dto.Tasks.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
             dataGridView1.DataSource = dto.Tasks;
             combofull = false;
             cmbDepartment.DataSource = dto.Departments;
@@ -63,6 +65,16 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].Visible = false;
+            if (!UserStatic.isAdmin)
+            {
+                btnNew.Visible = false;
+                btnUpdate.Visible = false;
+                btnDelete.Visible = false;
+                btnClose.Location = new Point(476, 16);
+                btnApprove.Location = new Point(358, 16);
+                pnlForAdmin.Hide();
+                btnApprove.Text = "Bàn giao";
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -189,6 +201,25 @@ namespace Personal_Tracking.NET
                     FillAllData();
                     CleanFilters();
                 }
+            }
+        }
+
+        private void btnApprove_Click(object sender, EventArgs e)
+        {
+            if (UserStatic.isAdmin && detail.TaskStateID == TaskState.OnEmployee && detail.EmployeeID != UserStatic.EmployeeID)
+                MessageBox.Show("Trước khi phê duyệt nhiệm vụ thì nhân viên phải bàn giao nhiệm vụ!");
+            else if (UserStatic.isAdmin && detail.TaskStateID == TaskState.Approved)
+                MessageBox.Show("Nhiệm vụ này đã được phê duyệt!");
+            else if (!UserStatic.isAdmin && detail.TaskStateID == TaskState.Delivered)
+                MessageBox.Show("Nhiệm vụ đã được bàn giao!");
+            else if (!UserStatic.isAdmin && detail.TaskStateID == TaskState.Approved)
+                MessageBox.Show("Nhiệm vụ này đã được phê duyệt!");
+            else
+            {
+                TaskBLL.ApproveTask(detail.TaskID, UserStatic.isAdmin);
+                MessageBox.Show("Cập nhật thành công!");
+                FillAllData();
+                CleanFilters();
             }
         }
     }

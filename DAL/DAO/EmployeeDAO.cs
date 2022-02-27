@@ -137,5 +137,33 @@ namespace DAL.DAO
                 throw;
             }
         }
+
+        public static void DeleteEmployee(int employeeId)
+        {
+            try
+            {
+                EMPLOYEE emp = db.EMPLOYEEs.First(x => x.ID == employeeId);
+                db.EMPLOYEEs.DeleteOnSubmit(emp);
+                db.SubmitChanges();
+
+                //Created Trigger
+                //List<TASK> tasks = db.TASKs.Where(x => x.ID == employeeId).ToList();
+                //db.TASKs.DeleteAllOnSubmit(tasks);
+                //db.SubmitChanges();
+
+                //List<SALARY> salaries = db.SALARies.Where(x => x.ID == employeeId).ToList();
+                //db.SALARies.DeleteAllOnSubmit(salaries);
+                //db.SubmitChanges();
+
+                //List<PERMISSION> permissions = db.PERMISSIONs.Where(x => x.ID == employeeId).ToList();
+                //db.PERMISSIONs.DeleteAllOnSubmit(permissions);
+                //db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }

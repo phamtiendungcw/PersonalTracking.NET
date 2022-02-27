@@ -154,5 +154,18 @@ namespace Personal_Tracking.NET
             detail.BirthDay = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này?", "Cảnh báo!!!",
+                MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                EmployeeBLL.DeleteEmployee(detail.EmployeeID);
+                MessageBox.Show("Nhân viên đã được xóa thành công!");
+                FillAllData();
+                CleanFilters();
+            }
+        }
     }
 }

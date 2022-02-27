@@ -27,5 +27,10 @@ namespace BLL
             if (control)
                 EmployeeDAO.UpdateEmployee(position);
         }
+
+        public static void DeletePosition(int detailId)
+        {
+            PositionDAO.DeletePosition(detailId);
+        }
     }
 }
