@@ -18,6 +18,7 @@ namespace Personal_Tracking.NET
             //worksheet = workbook.Sheets["Trang_tính1"];     // Language = vn
             worksheet = workbook.Sheets["Sheet1"];          // Language = en
             worksheet = workbook.ActiveSheet;
+            worksheet.Name = "Xuất từ GridView";
             for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
             {
                 worksheet.Cells[1, i] = dataGridView1.Columns[i - 1].HeaderText;
