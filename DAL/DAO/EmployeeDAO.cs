@@ -28,6 +28,17 @@ namespace DAL.DAO
             return db.EMPLOYEEs.Where(x => x.UserNo == v).ToList();
         }
 
+        public static void UpdateEmployee(POSITION position)
+        {
+            List<EMPLOYEE> list = db.EMPLOYEEs.Where(x => x.PositionID == position.ID).ToList();
+            foreach (var item in list)
+            {
+                item.DepartmentID = position.DepartmentID;
+            }
+
+            db.SubmitChanges();
+        }
+
         public static List<EmployeeDetailDTO> GetEmployees()
         {
             List<EmployeeDetailDTO> employeeList = new List<EmployeeDetailDTO>();
