@@ -223,5 +223,9 @@ namespace Personal_Tracking.NET
             }
         }
 
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExportToExcel.ExcelExport(dataGridView1);
+        }
     }
 }

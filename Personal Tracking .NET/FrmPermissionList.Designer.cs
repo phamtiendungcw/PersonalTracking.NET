@@ -63,6 +63,7 @@
             this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnExportExcel);
             this.panel4.Controls.Add(this.btnClear);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.cmbState);
@@ -110,13 +112,13 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(351, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(534, 237);
+            this.panel4.Size = new System.Drawing.Size(534, 254);
             this.panel4.TabIndex = 1;
             // 
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(363, 180);
+            this.btnClear.Location = new System.Drawing.Point(362, 173);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(142, 41);
             this.btnClear.TabIndex = 5;
@@ -127,7 +129,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(363, 133);
+            this.btnSearch.Location = new System.Drawing.Point(362, 126);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(142, 41);
             this.btnSearch.TabIndex = 4;
@@ -139,7 +141,7 @@
             // 
             this.cmbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(156, 175);
+            this.cmbState.Location = new System.Drawing.Point(155, 168);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(200, 28);
             this.cmbState.TabIndex = 3;
@@ -148,7 +150,7 @@
             // 
             this.groupBox1.Controls.Add(this.rbEndDate);
             this.groupBox1.Controls.Add(this.rbStartDate);
-            this.groupBox1.Location = new System.Drawing.Point(363, 47);
+            this.groupBox1.Location = new System.Drawing.Point(362, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(142, 80);
             this.groupBox1.TabIndex = 0;
@@ -182,7 +184,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(32, 178);
+            this.label10.Location = new System.Drawing.Point(31, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(95, 20);
             this.label10.TabIndex = 11;
@@ -191,7 +193,7 @@
             // dtpEnd
             // 
             this.dtpEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEnd.Location = new System.Drawing.Point(156, 93);
+            this.dtpEnd.Location = new System.Drawing.Point(155, 86);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(200, 26);
             this.dtpEnd.TabIndex = 1;
@@ -199,7 +201,7 @@
             // dtpStart
             // 
             this.dtpStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart.Location = new System.Drawing.Point(156, 52);
+            this.dtpStart.Location = new System.Drawing.Point(155, 45);
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(200, 26);
             this.dtpStart.TabIndex = 0;
@@ -208,7 +210,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 98);
+            this.label7.Location = new System.Drawing.Point(28, 91);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 20);
             this.label7.TabIndex = 13;
@@ -217,7 +219,7 @@
             // txtDayAmount
             // 
             this.txtDayAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDayAmount.Location = new System.Drawing.Point(156, 134);
+            this.txtDayAmount.Location = new System.Drawing.Point(155, 127);
             this.txtDayAmount.Name = "txtDayAmount";
             this.txtDayAmount.Size = new System.Drawing.Size(200, 26);
             this.txtDayAmount.TabIndex = 2;
@@ -227,7 +229,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 138);
+            this.label8.Location = new System.Drawing.Point(28, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 20);
             this.label8.TabIndex = 12;
@@ -237,7 +239,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(29, 58);
+            this.label9.Location = new System.Drawing.Point(28, 51);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 13;
@@ -247,7 +249,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 16);
+            this.label6.Location = new System.Drawing.Point(28, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(140, 20);
             this.label6.TabIndex = 8;
@@ -420,7 +422,7 @@
             this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlForAdmin.Location = new System.Drawing.Point(0, 0);
             this.pnlForAdmin.Name = "pnlForAdmin";
-            this.pnlForAdmin.Size = new System.Drawing.Size(351, 237);
+            this.pnlForAdmin.Size = new System.Drawing.Size(351, 254);
             this.pnlForAdmin.TabIndex = 0;
             // 
             // panel1
@@ -430,18 +432,29 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 237);
+            this.panel1.Size = new System.Drawing.Size(885, 254);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 243);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 260);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(885, 215);
+            this.dataGridView1.Size = new System.Drawing.Size(885, 198);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.Location = new System.Drawing.Point(155, 211);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(200, 37);
+            this.btnExportExcel.TabIndex = 14;
+            this.btnExportExcel.Text = "Export to Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // FrmPermissionList
             // 
@@ -505,5 +518,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }
