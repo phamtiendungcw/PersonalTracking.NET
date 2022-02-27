@@ -27,7 +27,14 @@ namespace Personal_Tracking.NET
             {
                 for (int j = 0; j < dataGridView1.Columns.Count; j++)
                 {
-                    worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                    else
+                    {
+                        worksheet.Cells[i + 2, j + 1] = "";
+                    }
                 }
             }
 
