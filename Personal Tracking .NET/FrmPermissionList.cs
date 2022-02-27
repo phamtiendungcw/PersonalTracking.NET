@@ -192,5 +192,23 @@ namespace Personal_Tracking.NET
             FillAllData();
             CleanFilters();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa quyền này chứ?", "Cảnh báo!!!",
+                MessageBoxButtons.YesNo);
+            if (DialogResult.Yes == rs)
+            {
+                if (detail.State == PermissionStates.Approved || detail.State == PermissionStates.Disapproved)
+                    MessageBox.Show("Bạn không thể xóa quyền đã được chấp thuận hoặc không chấp thuận!");
+                else
+                {
+                    PermissionBLL.DeletePermission(detail.PermissionID);
+                    MessageBox.Show("Xóa thành công!");
+                    FillAllData();
+                    CleanFilters();
+                }
+            }
+        }
     }
 }

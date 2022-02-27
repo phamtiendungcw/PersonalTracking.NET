@@ -33,7 +33,12 @@ namespace BLL
 
         public static void UpdatePermission(int permissionID, int approved)
         {
-            PermissionDAO.UpdatePermission(permissionID, approved); 
+            PermissionDAO.UpdatePermission(permissionID, approved);
+        }
+
+        public static void DeletePermission(int permissionId)
+        {
+            PermissionDAO.DeletePermission(permissionId);
         }
     }
 }
