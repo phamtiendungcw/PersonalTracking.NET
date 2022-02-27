@@ -48,7 +48,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDisaprove = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
@@ -280,7 +280,7 @@
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnDisaprove);
             this.panel2.Controls.Add(this.btnApprove);
             this.panel2.Controls.Add(this.btnNew);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -289,16 +289,16 @@
             this.panel2.Size = new System.Drawing.Size(885, 108);
             this.panel2.TabIndex = 2;
             // 
-            // button1
+            // btnDisaprove
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(113, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Không chấp thuận";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDisaprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisaprove.Location = new System.Drawing.Point(113, 57);
+            this.btnDisaprove.Name = "btnDisaprove";
+            this.btnDisaprove.Size = new System.Drawing.Size(175, 37);
+            this.btnDisaprove.TabIndex = 1;
+            this.btnDisaprove.Text = "Không chấp thuận";
+            this.btnDisaprove.UseVisualStyleBackColor = true;
+            this.btnDisaprove.Click += new System.EventHandler(this.btnDisapprove_Click);
             // 
             // btnApprove
             // 
@@ -499,7 +499,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDisaprove;
         private System.Windows.Forms.TextBox txtDayAmount;
         private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.Label label10;

@@ -185,7 +185,7 @@ namespace Personal_Tracking.NET
             CleanFilters();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDisapprove_Click(object sender, EventArgs e)
         {
             PermissionBLL.UpdatePermission(detail.PermissionID, PermissionStates.Disapproved);
             MessageBox.Show("Cập nhật thành công!");
@@ -200,7 +200,7 @@ namespace Personal_Tracking.NET
             if (DialogResult.Yes == rs)
             {
                 if (detail.State == PermissionStates.Approved || detail.State == PermissionStates.Disapproved)
-                    MessageBox.Show("Bạn không thể xóa quyền đã được chấp thuận hoặc không chấp thuận!");
+                    MessageBox.Show("Bạn không thể xóa quyền đã được phê duyệt hoặc không chấp thuận!");
                 else
                 {
                     PermissionBLL.DeletePermission(detail.PermissionID);
@@ -210,5 +210,6 @@ namespace Personal_Tracking.NET
                 }
             }
         }
+
     }
 }
