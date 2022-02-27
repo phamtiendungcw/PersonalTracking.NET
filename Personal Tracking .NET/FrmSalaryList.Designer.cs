@@ -30,7 +30,7 @@
         {
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.pnlForAdmin = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,13 +56,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlForAdmin = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pnlForAdmin.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlForAdmin.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -89,22 +89,22 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // pnlForAdmin
+            // panel4
             // 
-            this.pnlForAdmin.Controls.Add(this.btnClear);
-            this.pnlForAdmin.Controls.Add(this.btnSearch);
-            this.pnlForAdmin.Controls.Add(this.groupBox1);
-            this.pnlForAdmin.Controls.Add(this.cmbMonth);
-            this.pnlForAdmin.Controls.Add(this.label8);
-            this.pnlForAdmin.Controls.Add(this.txtSalary);
-            this.pnlForAdmin.Controls.Add(this.txtYear);
-            this.pnlForAdmin.Controls.Add(this.label6);
-            this.pnlForAdmin.Controls.Add(this.label7);
-            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForAdmin.Location = new System.Drawing.Point(351, 0);
-            this.pnlForAdmin.Name = "pnlForAdmin";
-            this.pnlForAdmin.Size = new System.Drawing.Size(581, 237);
-            this.pnlForAdmin.TabIndex = 1;
+            this.panel4.Controls.Add(this.btnClear);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.Controls.Add(this.cmbMonth);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.txtSalary);
+            this.panel4.Controls.Add(this.txtYear);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(351, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(581, 237);
+            this.panel4.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -359,28 +359,28 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã số nhân viên:";
             // 
-            // panel3
+            // pnlForAdmin
             // 
-            this.panel3.Controls.Add(this.cmbPosition);
-            this.panel3.Controls.Add(this.cmbDepartment);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtName);
-            this.panel3.Controls.Add(this.txtSurname);
-            this.panel3.Controls.Add(this.txtUserNo);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(351, 237);
-            this.panel3.TabIndex = 0;
+            this.pnlForAdmin.Controls.Add(this.cmbPosition);
+            this.pnlForAdmin.Controls.Add(this.cmbDepartment);
+            this.pnlForAdmin.Controls.Add(this.label5);
+            this.pnlForAdmin.Controls.Add(this.label4);
+            this.pnlForAdmin.Controls.Add(this.txtName);
+            this.pnlForAdmin.Controls.Add(this.txtSurname);
+            this.pnlForAdmin.Controls.Add(this.txtUserNo);
+            this.pnlForAdmin.Controls.Add(this.label3);
+            this.pnlForAdmin.Controls.Add(this.label2);
+            this.pnlForAdmin.Controls.Add(this.label1);
+            this.pnlForAdmin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlForAdmin.Location = new System.Drawing.Point(0, 0);
+            this.pnlForAdmin.Name = "pnlForAdmin";
+            this.pnlForAdmin.Size = new System.Drawing.Size(351, 237);
+            this.pnlForAdmin.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.pnlForAdmin);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -409,13 +409,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách Lương";
             this.Load += new System.EventHandler(this.FrmSalaryList_Load);
-            this.pnlForAdmin.ResumeLayout(false);
-            this.pnlForAdmin.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlForAdmin.ResumeLayout(false);
+            this.pnlForAdmin.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -426,7 +426,7 @@
 
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Panel pnlForAdmin;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbLess;
         private System.Windows.Forms.RadioButton rbMore;
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlForAdmin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RadioButton rbEqual;

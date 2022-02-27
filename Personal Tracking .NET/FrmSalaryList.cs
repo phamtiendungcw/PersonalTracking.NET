@@ -67,6 +67,8 @@ namespace Personal_Tracking.NET
         void FillAllData()
         {
             dto = SalaryBLL.GetAll();
+            if (!UserStatic.isAdmin)
+                dto.Salaries = dto.Salaries.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
             dataGridView1.DataSource = dto.Salaries;
             combofull = false;
             cmbDepartment.DataSource = dto.Departments;
@@ -89,8 +91,6 @@ namespace Personal_Tracking.NET
         private void FrmSalaryList_Load(object sender, EventArgs e)
         {
             FillAllData();
-            if (!UserStatic.isAdmin)
-                dto.Salaries = dto.Salaries.Where(x => x.EmployeeID == UserStatic.EmployeeID).ToList();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Mã số nhân viên";
             dataGridView1.Columns[2].HeaderText = "Họ";
