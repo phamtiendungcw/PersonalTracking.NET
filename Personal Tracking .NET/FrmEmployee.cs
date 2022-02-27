@@ -76,6 +76,7 @@ namespace Personal_Tracking.NET
                     txtSalary.Enabled = false;
                     cmbDepartment.Enabled = false;
                     cmbPosition.Enabled = false;
+                    btnCheck.Enabled = false;
                 }
             }
         }
