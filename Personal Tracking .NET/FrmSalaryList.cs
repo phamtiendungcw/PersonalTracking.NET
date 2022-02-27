@@ -190,12 +190,12 @@ namespace Personal_Tracking.NET
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa khoản lương này?", "Warning",
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa khoản lương này?", "Cảnh báo!!!",
                 MessageBoxButtons.YesNo);
             if (rs == DialogResult.Yes)
             {
                 SalaryBLL.DeleteSalary(detail.SalaryID);
-                MessageBox.Show("Salary đã được xóa");
+                MessageBox.Show("Lương đã được xóa");
                 FillAllData();
                 CleanFilters();
             }
