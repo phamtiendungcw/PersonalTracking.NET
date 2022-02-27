@@ -103,6 +103,14 @@ namespace Personal_Tracking.NET
             dataGridView1.Columns[11].HeaderText = "Lương";
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
+            if (!UserStatic.isAdmin)
+            {
+                btnUpdate.Hide();
+                btnDelete.Hide();
+                btnNew.Location = new Point(349, 16);
+                btnClose.Location = new Point(471, 16);
+                pnlForAdmin.Hide();
+            }
         }
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -176,6 +184,19 @@ namespace Personal_Tracking.NET
             detail.SalaryAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
             detail.OldSalary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
             detail.SalaryID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc muốn xóa khoản lương này?", "Warning",
+                MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                SalaryBLL.DeleteSalary(detail.SalaryID);
+                MessageBox.Show("Salary đã được xóa");
+                FillAllData();
+                CleanFilters();
+            }
         }
     }
 }
