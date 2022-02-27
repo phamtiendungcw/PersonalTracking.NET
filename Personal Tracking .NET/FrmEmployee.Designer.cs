@@ -40,6 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbSao = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
@@ -169,6 +170,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label12);
@@ -222,6 +224,17 @@
             this.label14.Size = new System.Drawing.Size(18, 22);
             this.label14.TabIndex = 16;
             this.label14.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(524, 135);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 22);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "*";
             // 
             // label13
             // 
@@ -452,16 +465,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // label12
+            // label16
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(524, 135);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(18, 22);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "*";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(433, 351);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(18, 22);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "*";
             // 
             // FrmEmployee
             // 
@@ -522,5 +535,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label16;
     }
 }

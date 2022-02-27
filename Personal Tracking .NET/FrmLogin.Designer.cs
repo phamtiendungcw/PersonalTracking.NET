@@ -64,10 +64,10 @@
             this.linkSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkSignUp.Location = new System.Drawing.Point(221, 176);
             this.linkSignUp.Name = "linkSignUp";
-            this.linkSignUp.Size = new System.Drawing.Size(101, 13);
+            this.linkSignUp.Size = new System.Drawing.Size(106, 13);
             this.linkSignUp.TabIndex = 5;
             this.linkSignUp.TabStop = true;
-            this.linkSignUp.Text = "Đăng Ký Nhân Viên";
+            this.linkSignUp.Text = "Đăng Ký Thành Viên";
             this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // ckShowPassword
