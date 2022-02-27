@@ -173,5 +173,23 @@ namespace Personal_Tracking.NET
             detail.Content = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
             detail.TaskStateID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[14].Value);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có chắc chắn muốn xóa nhiệm vụ này?", "Cảnh báo!!!",
+                MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                if (detail.TaskStateID == 2 || detail.TaskStateID == 3)
+                    MessageBox.Show("Bạn không thể xóa nhiệm vụ đã được bàn giao hoặc đã phê duyệt!");
+                else
+                {
+                    TaskBLL.DeleteTask(detail.TaskID);
+                    MessageBox.Show("Nhiệm vụ này đã được xóa!");
+                    FillAllData();
+                    CleanFilters();
+                }
+            }
+        }
     }
 }

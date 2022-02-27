@@ -32,28 +32,28 @@ namespace DAL.DAO
         {
             List<TaskDetailDTO> tasklist = new List<TaskDetailDTO>();
             var list = (from t in db.TASKs
-                join s in db.TASKSTATEs on t.TaskState equals s.ID
-                join e in db.EMPLOYEEs on t.EmployeeID equals e.ID
-                join d in db.DEPARTMENTs on e.DepartmentID equals d.ID
-                join p in db.POSITIONs on e.PositionID equals p.ID
-                select new
-                {
-                    taskID = t.ID,
-                    title = t.TaskTitle,
-                    content = t.TaskContent,
-                    startDate = t.TaskStartDate,
-                    deliveryDate = t.TaskDeliveryDate,
-                    taskStateName = s.StateName,
-                    taskStateID = t.TaskState,
-                    userNo = e.UserNo,
-                    surname = e.Surname,
-                    name = e.Name,
-                    employeeID = t.EmployeeID,
-                    positionName = p.PositionName,
-                    departmentName = d.DepartmentName,
-                    positionID = e.PositionID,
-                    departmentID = e.DepartmentID,
-                }).OrderBy(x => x.startDate).ToList();
+                        join s in db.TASKSTATEs on t.TaskState equals s.ID
+                        join e in db.EMPLOYEEs on t.EmployeeID equals e.ID
+                        join d in db.DEPARTMENTs on e.DepartmentID equals d.ID
+                        join p in db.POSITIONs on e.PositionID equals p.ID
+                        select new
+                        {
+                            taskID = t.ID,
+                            title = t.TaskTitle,
+                            content = t.TaskContent,
+                            startDate = t.TaskStartDate,
+                            deliveryDate = t.TaskDeliveryDate,
+                            taskStateName = s.StateName,
+                            taskStateID = t.TaskState,
+                            userNo = e.UserNo,
+                            surname = e.Surname,
+                            name = e.Name,
+                            employeeID = t.EmployeeID,
+                            positionName = p.PositionName,
+                            departmentName = d.DepartmentName,
+                            positionID = e.PositionID,
+                            departmentID = e.DepartmentID,
+                        }).OrderBy(x => x.startDate).ToList();
             foreach (var item in list)
             {
                 TaskDetailDTO dto = new TaskDetailDTO();
@@ -87,6 +87,21 @@ namespace DAL.DAO
                 ts.TaskContent = task.TaskContent;
                 ts.TaskState = task.TaskState;
                 ts.EmployeeID = task.EmployeeID;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public static void DeleteTask(int detailTaskId)
+        {
+            try
+            {
+                TASK ts = db.TASKs.First(x => x.ID == detailTaskId);
+                db.TASKs.DeleteOnSubmit(ts);
                 db.SubmitChanges();
             }
             catch (Exception e)

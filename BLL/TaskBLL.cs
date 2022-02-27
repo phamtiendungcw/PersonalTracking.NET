@@ -31,5 +31,10 @@ namespace BLL
         {
             TaskDAO.UpdateTask(task);
         }
+
+        public static void DeleteTask(int detailTaskId)
+        {
+            TaskDAO.DeleteTask(detailTaskId);
+        }
     }
 }
