@@ -39,7 +39,9 @@ namespace Personal_Tracking.NET
             e.Handled = General.isNumber(e);
         }
 
-
+        public EmployeeDetailDTO detail = new EmployeeDetailDTO();
+        public bool isUpdate = false;
+        private string imagePath = "";
         private void FrmEmployee_Load(object sender, EventArgs e)
         {
             dto = EmployeeBLL.GetAll();
@@ -52,8 +54,23 @@ namespace Personal_Tracking.NET
             cmbDepartment.SelectedIndex = -1;
             cmbPosition.SelectedIndex = -1;
             combofull = true;
+            if (isUpdate)
+            {
+                txtSurname.Text = detail.Surname;
+                txtName.Text = detail.Name;
+                txtUserNo.Text = detail.UserNo.ToString();
+                txtPassword.Text = detail.Password;
+                chAdmin.Checked = Convert.ToBoolean(detail.isAdmin);
+                txtAddress.Text = detail.Address;
+                dtpBirthday.Value = Convert.ToDateTime(detail.BirthDay);
+                cmbDepartment.SelectedValue = detail.DepartmentID;
+                cmbPosition.SelectedValue = detail.PositionID;
+                txtSalary.Text = detail.Salary.ToString();
+                imagePath = Application.StartupPath + "\\images\\" + detail.ImagePath;
+                txtImagePath.Text = imagePath;
+                pbImage.ImageLocation = imagePath;
+            }
         }
-
 
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -96,8 +113,6 @@ namespace Personal_Tracking.NET
         {
             if (txtUserNo.Text.Trim() == "")
                 MessageBox.Show("Mã số nhân viên không được để trống!");
-            else if (!EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text)))
-                MessageBox.Show("Mã số nhân viên đã được sử dụng. Hãy thay đổi mã số khác!");
             else if (txtPassword.Text.Trim() == "")
                 MessageBox.Show("Mục mật khẩu không được để trống!");
             else if (txtSurname.Text.Trim() == "")
@@ -112,36 +127,77 @@ namespace Personal_Tracking.NET
                 MessageBox.Show("Hãy lựa chọn một chức vụ!");
             else
             {
-                EMPLOYEE employee = new EMPLOYEE();
-                employee.UserNo = Convert.ToInt32(txtUserNo.Text);
-                employee.Password = txtPassword.Text;
-                employee.isAdmin = chAdmin.Checked;
-                employee.Surname = txtSurname.Text;
-                employee.Name = txtName.Text;
-                employee.Salary = Convert.ToInt32(txtSalary.Text);
-                employee.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
-                employee.PositionID = Convert.ToInt32(cmbPosition.SelectedValue);
-                employee.Address = txtAddress.Text;
-                employee.BirthDay = dtpBirthday.Value;
-                employee.ImagePath = fileName;
-                EmployeeBLL.AddEmployee(employee);
-                File.Copy(txtImagePath.Text, @"images\\" + fileName);
-                MessageBox.Show("Thông tin nhân viên đã được lưu!");
-                txtUserNo.Clear();
-                txtPassword.Clear();
-                chAdmin.Checked = false;
-                txtSurname.Clear();
-                txtName.Clear();
-                txtSalary.Clear();
-                txtAddress.Clear();
-                txtImagePath.Clear();
-                pbImage.Image = null;
-                combofull = false;
-                cmbDepartment.SelectedIndex = -1;
-                cmbPosition.DataSource = dto.Positions;
-                cmbPosition.SelectedIndex = -1;
-                combofull = true;
-                dtpBirthday.Value = DateTime.Today;
+                if (!isUpdate)
+                {
+                    if (!EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text)))
+                        MessageBox.Show("Mã số nhân viên đã được sử dụng. Hãy thay đổi mã số khác!");
+                    else
+                    {
+                        EMPLOYEE employee = new EMPLOYEE();
+                        employee.UserNo = Convert.ToInt32(txtUserNo.Text);
+                        employee.Password = txtPassword.Text;
+                        employee.isAdmin = chAdmin.Checked;
+                        employee.Surname = txtSurname.Text;
+                        employee.Name = txtName.Text;
+                        employee.Salary = Convert.ToInt32(txtSalary.Text);
+                        employee.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
+                        employee.PositionID = Convert.ToInt32(cmbPosition.SelectedValue);
+                        employee.Address = txtAddress.Text;
+                        employee.BirthDay = dtpBirthday.Value;
+                        employee.ImagePath = fileName;
+                        EmployeeBLL.AddEmployee(employee);
+                        File.Copy(txtImagePath.Text, @"images\\" + fileName);
+                        MessageBox.Show("Thông tin nhân viên đã được lưu!");
+                        txtUserNo.Clear();
+                        txtPassword.Clear();
+                        chAdmin.Checked = false;
+                        txtSurname.Clear();
+                        txtName.Clear();
+                        txtSalary.Clear();
+                        txtAddress.Clear();
+                        txtImagePath.Clear();
+                        pbImage.Image = null;
+                        combofull = false;
+                        cmbDepartment.SelectedIndex = -1;
+                        cmbPosition.DataSource = dto.Positions;
+                        cmbPosition.SelectedIndex = -1;
+                        combofull = true;
+                        dtpBirthday.Value = DateTime.Today;
+                    }
+                }
+                else
+                {
+                    DialogResult rs = MessageBox.Show("Bạn có chắc muốn cập nhật?", "Cảnh báo!!",
+                        MessageBoxButtons.YesNo);
+                    if (rs == DialogResult.Yes)
+                    {
+                        EMPLOYEE employee = new EMPLOYEE();
+                        if (txtImagePath.Text != imagePath)
+                        {
+                            if (File.Exists(@"images\\" + detail.ImagePath))
+                                File.Delete(@"images\\" + detail.ImagePath);
+                            File.Copy(txtImagePath.Text, @"images\\" + fileName);
+                            employee.ImagePath = fileName;
+                        }
+                        else
+                            employee.ImagePath = detail.ImagePath;
+
+                        employee.ID = detail.EmployeeID;
+                        employee.UserNo = Convert.ToInt32(txtUserNo.Text);
+                        employee.Surname = txtSurname.Text;
+                        employee.Name = txtName.Text;
+                        employee.isAdmin = chAdmin.Checked;
+                        employee.Password = txtPassword.Text;
+                        employee.Address = txtAddress.Text;
+                        employee.BirthDay = dtpBirthday.Value;
+                        employee.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
+                        employee.PositionID = Convert.ToInt32(cmbPosition.SelectedValue);
+                        employee.Salary = Convert.ToInt32(txtSalary.Text);
+                        EmployeeBLL.UpdateEmployee(employee);
+                        MessageBox.Show("Cập nhật thành công!");
+                        Close();
+                    }
+                }
             }
         }
     }
