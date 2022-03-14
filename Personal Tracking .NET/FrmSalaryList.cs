@@ -171,6 +171,8 @@ namespace Personal_Tracking.NET
             rbMore.Checked = false;
             rbLess.Checked = false;
             rbEqual.Checked = false;
+            rbSortLarge.Checked = false;
+            rbSortSmall.Checked = false;
             txtYear.Clear();
             txtSalary.Clear();
             dataGridView1.DataSource = dto.Salaries;
