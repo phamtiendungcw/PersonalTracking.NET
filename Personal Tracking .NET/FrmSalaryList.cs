@@ -216,12 +216,14 @@ namespace Personal_Tracking.NET
                 // Sắp xếp dữ liệu từ lớn đến nhỏ
                 list = list.OrderByDescending(x => x.SalaryAmount).ToList();
                 dataGridView1.DataSource = list;
+                MessageBox.Show("Bảng lương đã được sắp xếp theo thứ tự lương từ Lớn -> Nhỏ");
             }
             else if (rbSortSmall.Checked)
             {
                 // Sắp xếp dữ liệu từ nhỏ đến lớn
                 list = list.OrderBy(x => x.SalaryAmount).ToList();
                 dataGridView1.DataSource = list;
+                MessageBox.Show("Bảng lương đã được sắp xếp theo thứ tự lương từ Nhỏ -> Lớn");
             }
         }
     }
