@@ -205,5 +205,22 @@ namespace Personal_Tracking.NET
         {
             ExportToExcel.ExcelExport(dataGridView1);
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            List<SalaryDetailDTO> list = dto.Salaries;
+            if (rbSortLarge.Checked)
+            {
+                // Sắp xếp dữ liệu từ lớn đến nhỏ
+                list = list.OrderByDescending(x => x.SalaryAmount).ToList();
+                dataGridView1.DataSource = list;
+            }
+            else if (rbSortSmall.Checked)
+            {
+                // Sắp xếp dữ liệu từ nhỏ đến lớn
+                list = list.OrderBy(x => x.SalaryAmount).ToList();
+                dataGridView1.DataSource = list;
+            }
+        }
     }
 }
