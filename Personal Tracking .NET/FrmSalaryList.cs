@@ -225,6 +225,10 @@ namespace Personal_Tracking.NET
                 dataGridView1.DataSource = list;
                 MessageBox.Show("Bảng lương đã được sắp xếp theo thứ tự lương từ Nhỏ -> Lớn");
             }
+            else
+            {
+                MessageBox.Show("Hãy lựa chọn một tác vụ sắp xếp trong mục Sort Data By Salary");
+            }
         }
     }
 }
